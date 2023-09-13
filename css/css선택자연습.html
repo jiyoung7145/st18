@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css선택자연습</title>
+    <style>
+      div.container{background-color: #ccc;
+    padding: 50px;} 
+      section{background-color: #00f;} 
+      #section1{background-color: #f00;}
+      section#section2>p{background-color: #0f0;}
+      #section2>p{background-color: #86f !important}
+      #section2 h1~p{background-color: #fff;}
+      
+    </style>
 </head>
 <body>
     <div id="wrap">

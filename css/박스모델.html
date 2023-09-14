@@ -8,13 +8,39 @@
     <link rel="stylesheet" href="asset/css/style.css">
     <!-- html 문서내에서 css 선언 -->
     <style>
-      body{color: #f68 !important; }
+      .box{
+        /* border-color: #000;
+        border-style: solid;
+        border-width: 1px; */
+        border: #000 dotted 10px;
+        border-top-color: #f00;
+        background-color: #ccc;
+        /* 안쪽 여백 padding 
+        padding : 상 우 하 좌;
+        padding : 상 좌우 하;
+        padding : 상하 좌우;
+        padding : 상우하좌;
+         */
+        padding: 10px 20px 30px 40px;
+        /* 바깥쪽 여백 margin
+        margi 상우하좌; */
+        margin: 50px;
+      }
+      /* 두번째 .box padding을 상우하좌 50px
+       선택자
+       두번째 .box
+       속성
+        */
+        div:nth-of-type(2){
+            padding: 28px 50px;
+            background-color: #f00;
+        }
     </style>
 </head>
 <!-- 태그의 인라인으로 css적용 -->
-<body style="color: #f0f;">
+<body>
  <h1 class="page-title">웹폰트 사용</h1>
-   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum modi officia veniam, ad incidunt, optio tempora aperiam eos quidem quae beatae sint placeat? Quaerat iusto perferendis ullam nobis aperiam dolores.
+   <div class="box">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum modi officia veniam, ad incidunt, optio tempora aperiam eos quidem quae beatae sint placeat? Quaerat iusto perferendis ullam nobis aperiam dolores.</div>
    <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus impedit odit esse, laborum harum soluta rerum officia? Reiciendis esse adipisci labore, aliquid libero laborum impedit provident maiores, ipsam corrupti rerum?</div>x
    <!-- ul>li*4>a>{test$} -->
    <ul>
@@ -24,10 +50,6 @@
     <li><a href="">text4</a></li>
    </ul> 
    <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quas? Quasi iure voluptatibus, vero voluptatum autem ratione corporis molestias officiis laboriosam praesentium eligendi, laudantium inventore, error optio ipsa et nobis.</div>
-    <style>
-        body{
-            color: #00f;
-        }
-    </style>
+    
 </body>
 </html>

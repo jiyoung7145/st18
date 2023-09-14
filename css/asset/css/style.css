@@ -1,4 +1,5 @@
 /* @import선언되는 선언부 문서앞에서 작성 */
+/* 웹포트 선언부 */
 /* font-family: 'Noto Sans KR', sans-serif; 
    font-family:'IBM Plex Sans KR', sans-serif;*/
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&family=Noto+Sans+KR:wght@100;400;700;900&display=swap');
@@ -28,5 +29,4 @@ a:hover{color: #f00; text-decoration: underline ;}
     font-weight: 600;
     font-family:'IBM Plex Sans KR', sans-serif ;
     background-color: #ccc; /*테스트용*/
-    height: 80px;
 }

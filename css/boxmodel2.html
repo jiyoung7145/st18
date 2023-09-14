@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글꼴</title>
+    <!-- 외부의 css를 불러올때 -->
+    <link rel="stylesheet" href="asset/css/style.css">
+    <!-- html 문서내에서 css 선언 -->
+    <style>
+      *{padding: 0; margin: 0;}
+         h1{
+          background-color: #f68;
+        }
+        .box:nth-of-type(1){
+          margin: 50px;
+        }
+        /* lm+lb+lp+content+rp+rb+rm 
+        lb1+bp50+width300+rp50+rb1+rm
+        1+50+300+50+1=402(총width) 마진뺀 나머지를 알려줌 */
+        .box:nth-of-type(2){
+          background-color: #ccc;
+          width: 300px;
+          padding: 30px 50px;
+          border: 1px solid #000;
+          /* margin: 100px auto; */
+          /* margin: 상하 auto; 블록레벨을 가운데 위치 */
+          text-align: center;
+        }  
+      ul{
+        width: 80%;
+        margin: 50px auto;
+        background-color: #ccc;
+        /* 블럭레벨의 자식 중 인라인레벨을 정렬 */
+        text-align: center;
+      }
+       ul li{
+        background-color: #f68;
+        width: calc(25% - 4px);
+        /* width: 100px;  인라인레벨 적용안됨 */
+        /* padding: 2rem; */
+        /* 인라인블럭 인라인 줄바꿈없는 특징, 블록의 크기지정 특징 */
+        display: inline-block;/*block - inline 전환 문자처럼 취급*/
+
+       }
+       .test{
+        /* inline 라벨은 수직여백은 정상적으로 정용안된다 */
+        /* inline 레벨은 크기지정을 할 수 없어요
+        inline 레벨은 자신이 포함한 내용만큼의 크기를 유지 */
+        background-color: #6f8;
+        border: 1px solid #000;
+        /* padding: 50px;
+        margin: 50px; */
+        padding:0 1rem;
+        margin:0 2rem;
+       }
+    </style>
+</head>
+<!-- 태그의 인라인으로 css적용 -->
+<body>
+ <h1 class="page-title">웹폰트 사용</h1>
+
+   <div class="box">Lorem, ipsum <span class="test">dolor sit</span> amet <span class="test">consectetur adipisicing</span> elit. Harum modi officia veniam, ad incidunt, optio tempora aperiam eos quidem quae beatae sint placeat? Quaerat iusto perferendis ullam nobis aperiam dolores.</div>
+   <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus impedit odit esse, laborum harum soluta rerum officia? Reiciendis esse adipisci labore, aliquid libero laborum impedit provident maiores, ipsam corrupti rerum?</div>
+   <!-- ul>li*4>a>{test$} -->
+   <ul>
+    <li><a href="">text1</a></li>
+    <li><a href="">text2</a></li>
+    <li><a href="">text3</a></li>
+    <li><a href="">text4</a></li>
+   </ul> 
+   <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quas? Quasi iure voluptatibus, vero voluptatum autem ratione corporis molestias officiis laboriosam praesentium eligendi, laudantium inventore, error optio ipsa et nobis.</div>
+    
+</body>
+</html>

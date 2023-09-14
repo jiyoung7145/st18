@@ -23,8 +23,8 @@
          */
         padding: 10px 20px 30px 40px;
         /* 바깥쪽 여백 margin
-        margi 상우하좌; */
-        margin: 50px;
+        margin 상우하좌; */
+        /* margin: 50px; */
       }
       /* 두번째 .box padding을 상우하좌 50px
        선택자
@@ -34,6 +34,23 @@
         div:nth-of-type(2){
             padding: 28px 50px;
             background-color: #f00;
+        }
+        *{padding: 0; margin: 0;}
+        /* 요소의 수평크기
+        lm+lb+lp+content(width)+rp+rb+rm
+        요소의 수직크기
+        tm+tb+tp+content(height)+bp+bb+bm */
+        h1{
+          background-color: #f68;
+        }
+        .box:nth-of-type(1){
+          margin: 50px;
+        }
+   
+        .box:nth-of-type(2){
+          width: 300px;
+          margin: 100px auto;
+          /* margin: 상하 auto; 블록레벨을 가운데 위치 */
         }
     </style>
 </head>

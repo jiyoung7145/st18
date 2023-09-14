@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxmodel3 - boxmodel 계산법</title>
+    <style>
+     *{margin: 0; padding: 0;}
+       .box{
+        /* width크기 auto(lb) +10(lb) +50(lp)+400(width)+50(rp)+10(rb)+auto(rm) =520 */
+        width: 400px;
+        height: 300px;
+        padding:50px;
+        border:10px solid #f86;
+        margin:50px auto; /* 50px은 상하, block 가운데정렬*/
+        background-color: #333;
+        color: #fff;
+       }
+       .box{
+        box-sizing: :content-box;
+        /* content-box 기본값 */
+       }
+       .box2{
+        box-sizing: border-box;
+        /* box-sizing은 박스모델 계산법을 지정 
+        width/height 지정값이 박스모델 content영역지정->기본값 -context-box
+        박스모델 border+padding+content -> border-box
+        width 선언된 값은 border+padding+content */
+       }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+       <div class="box box1">
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod error rem dolorum ratione odio distinctio qui harum vitae id omnis tenetur sit aperiam, blanditiis nam voluptates ea. Tempora, recusandae quo!</div>
+        <div>Error et soluta, magnam dolorum eaque corrupti commodi asperiores veniam. Inventore, cupiditate aspernatur, hic quidem libero et alias amet blanditiis vitae, illum impedit eius! Ratione eaque ex cumque eos at.</div>
+       </div>
+       <div class="box box2">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aperiam voluptatibus ut accusantium aspernatur commodi quas cupiditate ab in neque ipsa dolorem vitae dolor at facilis, voluptate doloremque perspiciatis pariatur.</div>
+        <div>Aut aliquid esse enim nobis aliquam iure, tenetur dolor veritatis magni placeat quidem corporis vel rem cupiditate. Magni, impedit numquam. Voluptatum aut non quaerat culpa quia explicabo aspernatur, eveniet blanditiis?</div>
+       </div>
+
+
+    </div>
+</body>
+</html>

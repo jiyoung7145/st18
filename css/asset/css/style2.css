@@ -1,6 +1,9 @@
 /* 나눔 고딕 웹폰트선언  import*/
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;400;700;900&display=swap');
 /* font-family: ''Nanum Gothic', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+/* font-family: 'Dancing Script', cursive; */
+
 
 /* resrt */
 *{margin: 0; padding: 0;}
@@ -9,6 +12,7 @@
 줄간격 1.2
 글자색 #333 
 그리고 ios에서 핸드폰 방향*/
+
 body{
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 0.938em;
@@ -20,6 +24,7 @@ body{
 /* 높이는 자식한테 너비는 부모한테 준다 */
 /* header를 부모의 너비를 다 쓰고
 최소 높이는 50px되고 아니면 자식의 높이를 따른다
+부모에게 높이를 주지않는다 자동인식되니까
 안쪽여백 2글자 들어가게
 배경색은 회색 */
 header{
@@ -28,12 +33,24 @@ header{
     padding: 2rem;
     background-color: #ccc;
 }
-h1{
+.page-title{
     width: 90%;
     max-width: 1400px;
-    margin:0 auto;
+    margin:0 auto; 
+    /* margin:50 auto; 부모가 border padding text가 없을 경우는 margin없음 자식한테 마진주지말고 부모에게 패딩을준다*/
     background-color: #f00;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: #fff;
 }
 /* h1은 너비를 1400을 가지고 
 부모영역에서 가운데
  */
+ .container{}
+
+ section{
+    background-color: #efefef;
+    margin-top: 50px;
+    min-height: 100px; /*최소크기 100 안된다면 유지해준다*/
+ }
+ 

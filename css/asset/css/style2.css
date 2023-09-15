@@ -51,6 +51,16 @@ header{
  section{
     background-color: #efefef;
     margin-top: 50px;
-    min-height: 100px; /*최소크기 100 안된다면 유지해준다*/
+    /* min-height: 100px; 최소크기 100 안된다면 유지해준다 */
+    height: 100px;
+    /* width: 50vw; */
+    width: 300px;
+    margin:50px auto;
+
  }
+
+ #section1{overflow: auto;}
+ #section2{overflow: hidden;}
+ /* #section3{overflow: scroll;} */
+ #section3{overflow: auto;} /*넘칠때만 스크롤 생기게됨*/
  

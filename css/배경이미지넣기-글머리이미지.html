@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지넣기-글머리이미지넣기</title>
+</head>
+<body>
+    <div class="container">
+        <!-- .box*3.box$>{text$} -->
+        <div class="box box1">text1</div>
+        <div class="box box2">text2</div>
+        <div class="box box3">text3</div>
+        <div class="box box4">text4</div>
+
+    </div>
+    <style>
+        *{margin: 0; padding: 0;}
+        .container{
+            margin: 50px;
+            padding: 50px; /*box의 마진이기도 함*/
+            border: 1px solid #000;
+        }
+        .box{
+            padding: 10px 70px; /*상하 좌우*/
+            border: 10px dotted red;/*box의 공통 여백 선언*/
+            background-color: #ccc;
+            margin-bottom: 50px;
+        }
+        .box:last-child{
+            margin-bottom: 0; /*제거해야되는 공백*/
+        }
+        .box1{
+            background-image: url(background/images/img1.png);
+            background-size: 70px; /*높이 auto, 기본적으로 반복*/
+            background-repeat: no-repeat;
+            background-position: -20px -20px;
+            min-height: 300px;
+        }
+        .box2{
+            /* background-image: url(background/images/sprite.png); */
+            background-repeat: no-repeat;
+            padding-left: 0; /*.box {padding:2px 70px}의 왼쪽패딩 무효화*/
+            min-height: 300px;
+        }
+        .box2:before{
+            /* content:'box2앞'; */
+            content:''; /*block처리하려면 content속성있어야해요*/
+            width: 90px;
+            height: 105px;
+            background: transparent url(background/images/sprite.png) no-repeat 0 -955px;
+            /* background-image: url(background/images/sprite.png);
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-position: 0 -955px; */
+           
+            display: block; /*인라인레벨을 블럭레벨로 변경*/
+            margin:0 auto; /*가운데 정렬*/
+        }
+        .box2:after{
+            content:'box2뒤'
+        }
+        .box3{
+            background-image: url(background/images/face_FILL0_wght400_GRAD0_opsz24.png);
+            background-repeat: no-repeat;
+            background-position: 4px 18px;
+            background-origin:padding-box; 
+            background-clip: border-box; /*기본값은 borderbox*/
+
+            line-height: 60px; /*한줄짜리 텍스트를 정확히 가운데-제목*/
+            padding: 0;/*패딩이없는 상태로*/
+            padding-left: 33px;
+
+        }
+       .box4{
+        padding-left: 1em; 
+        background-image: url(background/images/face_FILL0_wght400_GRAD0_opsz24.png);
+        background-repeat: no-repeat; /*배경이미지 반복없이 face 아이콘넣기*/
+        background-position: 100% 10px; /*right  수평, 수직 수치임*/
+        /*간단표기법으로 하면 초기값설정됨 */
+       }
+    </style>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정렬</title>
+</head>
+<body>
+   <!-- .box>(.sect-title>{sect-title})+.content-wrap>p*2>lorem  -->
+   <div class="box">
+    <div class="sect-title">sect-title</div>
+    <div class="content-wrap">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente voluptates iure saepe odio voluptate tenetur ea tempore dicta ipsum! Officiis dolor deserunt suscipit culpa mollitia voluptate eaque minus ex?</p>
+        <p>Atque culpa eveniet, enim deleniti est quibusdam magni repellat temporibus harum, libero nemo ea explicabo facilis distinctio totam qui cumque doloremque corrupti. Neque corporis soluta in nisi odio consequatur asperiores?</p>
+    </div>
+   </div>
+   <style>
+    .box .sect-title{
+        text-align: center;
+    }
+    .content-wrap p:first-child{
+        text-align: left; /*기본값*/
+    }
+    .content-wrap p:last-child{
+        text-align: justify; /*양끝정렬*/
+    }
+   </style> 
+</body>
+</html>

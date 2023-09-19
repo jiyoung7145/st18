@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트관련</title>
+    <style>
+      *{margin: 0; padding 0;}
+      .wrap{margin: 50px;
+        box-sizing: border-box;
+        border: 1px solid #000;
+
+      }
+      .wrap p{
+        text-indent: 1em; 
+        text-transform: uppercase; /*대문자지정*/
+        letter-spacing: 0px; /*자간 글자체를 따른다 */
+      }
+      .wrap p:last-child{
+        text-indent: -32px; /*들여쓰기 + 내어쓰기 -*/
+        text-transform: capitalize; /*첫글자 대문자*/
+        letter-spacing: -1px;/*-는 겹쳐짐글자체를 따른다 */
+      }
+      .sect2 {
+        background-color: #333;
+      }
+      .sect2 .section-title{
+        color:#fff;
+        font-weight: 700;
+        text-shadow: 0px 0px 10px rgba(255,255,255,1);
+      }
+
+    </style>
+</head>
+<body>
+    <div class="wrap div">
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id eius, ducimus repellendus illo nesciunt, corporis ipsa, maxime voluptatibus explicabo quia molestias corrupti! Eveniet odit, fuga laborum nobis nemo corporis numquam?</p>
+       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse cum qui odio est voluptatum, delectus repellat ipsam ab distinctio adipisci, itaque, accusamus voluptate ad perferendis exercitationem id facilis fugiat aliquam?</p>     
+
+    </div>
+    <div class="sect1">
+        <p class="section-title">
+            section-title
+        </p>
+    </div>
+    <div class="sect2">
+        <p class="section-title">
+            section-title
+        </p>
+    </div>
+    <style>
+      .section-title{
+        font-size: 2.5rem;
+        text-transform: capitalize; /*영어만 적용*/
+        padding: 1em;
+        text-shadow: 10px 10px 2px rgba(255,0,0,0.5); /*out glow*/
+        /* text-shadow: -10px -10px 0px rgba(255,0,0,0.5); */
+      }
+
+    </style>
+</body>
+</html>

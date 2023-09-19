@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블관련css</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .container{margin: 50px;}
+        table, tr, td, th{
+            box-sizing: border-box; /*먼저 선언*/
+        }
+        table.sample{
+            table-layout: fixed; /*테이블과 셀에 너비를 지정할 때 기본지정함*/
+            border-collapse: collapse; /*셀과셀사이 여백을 안쓸때 기본지정함*/
+            border: 1px; solid #000;
+            border-top: 10px solid #f86; 
+            width 100%; /*부모의 컨텐츠 영역을 모두사용*/
+            box-sizing: border-box; /*항상 적용 계산이 편해집니다*/
+        }
+
+        .sample tr:nth-child(1) th{
+               background-color: #000;
+               color: #fff;
+               padding:1rem;
+
+        }
+
+        .sample th,
+        .sample td{
+            padding: 1rem;
+            border:1px solid #000;
+            box-sizing: border-box;
+        }
+
+        .sample th:nth-child(1) td{
+            width: 11rem; /*젤 긴문자에 맞춰서 설정 rem바디의 지정된 글자크기임 th들어간 크기로하려면 em으로 처리해야됨*/
+            padding: 1rem;
+        
+        }
+        .sample tr:nth-child(1) td{vertical-align: middle;}
+        .sample tr:nth-child(2) td{vertical-align: top;}
+        .sample tr:nth-child(3) td{vertical-align: middle;}
+        .sample tr:nth-child(4) td{vertical-align: bottom;}
+        
+   .sample th:nth-child(3){
+    width: 150px;
+   }
+   /*짝수번째줄*/
+    .sample tr:nth-child(even) td{
+        background-color: #efefef;
+    }
+    /* 홀수번재줄 */
+    .sample tr:nth-child(odd) td{
+        background-color: #fff;
+    }
+    .sample tr:hover td{
+        background-color: #68f;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- table.sample>tr>th*3>{tltle$}^tr  ^한단계 올라감-->
+        <!-- table.sample>tr>th*3>{tltle$}^^tr  ^한단계 올라감-->
+       <table class="sample">
+        <tr>
+            <th>title1</th>
+            <th>title1</th>
+            <th>title1</th>
+        </tr>
+           <!-- 둘째 tr -->
+           <tr>
+            <td>가나다라마바사 아자차</td>
+            <td>Totam, fugit.sit amet consectetur adipisicing elit. Tenetur labore totam laborum iste numquam veniam ducimus id laboriosam consequuntur quasi accusantium quas ut suscipit recusandae ipsa minus facilis, minima omnis?
+                Odit, quaerat, culpa officiis distinctio recusandae atque obcaecati non harum libero dolorum esse temporibus, autem quasi nesciunt! Quas quia aliquid expedita nulla veritatis similique ullam! Voluptates molestias ipsum labore reprehenderit</td>
+            <td>Explicabo, ratione!</td>
+           </tr>
+           <!-- 셋째 tr -->
+           <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis iusto pariatur doloribus eius optio quae tempora iure possimus dolorem, vel error tempore et! Suscipit ipsam alias, deserunt illo quod autem!
+            Et reiciendis officia quibusdam nisi, inventore praesentium similique consectetur esse doloremque nemo minima doloribus quidem veritatis quam? Architecto officiis qui quas, quidem praesentium porro, laudantium dignissimos, earum itaque deserunt sunt.</td>
+            <td>Id, eaque.</td>
+           </tr>
+           <!-- 넷째 tr -->
+           <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis iusto pariatur doloribus eius optio quae tempora iure possimus dolorem, vel error tempore et! Suscipit ipsam alias, deserunt illo quod autem!
+                Et reiciendis officia quibusdam nisi, inventore praesentium similique consectetur esse doloremque nemo minima doloribus quidem veritatis quam? Architecto officiis qui quas, quidem praesentium porro, laudantium dignissimos, earum itaque deserunt sunt.</td>
+            <td>Accusamus, minima!</td>
+           </tr>
+       </table>
+        
+    </div>
+</body>
+</html>

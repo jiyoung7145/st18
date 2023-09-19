@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>말줄임표 관련 css</title>
+    <style>
+       .sample{
+        width: 400px;
+        margin: 100px auto;
+        box-sizing: border-box;
+        border: 1px solid #000;
+       }
+         .box{padding: 30px; background-color: #ccc;}
+
+
+       .box p{
+        /* 말줄임관련 */
+        /* white-spacing: nowrap; */
+        white-space: nowrap;
+        overflow: hidden; /*넘치는 글자 숨겨라*/
+        /* height: 150px; */
+        text-overflow: ellipsis; /*없어진 텍스트 줄임말처리*/
+          background-color: #f68;
+          margin-bottom: 50px;
+          text
+
+          
+       }
+       .sample:nth-of-type(2) .box p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip; /*말줄임할때 위 3줄 모두 들어가야함*/
+
+
+       }
+
+    </style>
+</head>
+<body>
+ <!-- .sample*2>.box>p*2>lorem*2    -->
+ <div class="sample">
+    <div class="box">
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dolorum nemo, reprehenderit sapiente exercitationem quos corrupti corporis sequi, possimus earum necessitatibus! Dignissimos vitae recusandae quidem. Ab delectus quam corporis odio.</span><span>Quidem rem necessitatibus nemo temporibus vel adipisci ea provident eum et saepe dolorem, corrupti quod beatae ipsa sit tenetur sequi debitis! Necessitatibus nobis quasi aperiam beatae labore, culpa blanditiis ducimus!</span></p>
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia rem iusto earum omnis. Eos accusamus iure perspiciatis fuga numquam cumque nesciunt earum voluptatum excepturi modi voluptates non ad, consequuntur totam!</span><span>Voluptates, similique nesciunt quaerat praesentium itaque vel quam tempore pariatur accusantium voluptas, saepe doloremque molestias quis aliquid recusandae aspernatur repudiandae temporibus aut quisquam maxime qui incidunt, nam perferendis! Quaerat, dolore.</span></p>
+    </div>
+ </div>
+ <div class="sample">
+    <div class="box">
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cum earum eius perspiciatis corporis, explicabo qui esse quo ipsam at dolore repellendus minima delectus maxime, quidem expedita, reprehenderit facilis ipsa.</span><span>Possimus deleniti facilis cupiditate pariatur doloremque eum veniam, voluptatem, quaerat illo quod assumenda corporis nam repellendus. Deleniti, nostrum quibusdam alias consequatur incidunt voluptatum nam laborum pariatur, nemo porro eum! Ex.</span></p>
+        <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sint error, doloremque ullam earum ducimus, animi corrupti expedita voluptatum possimus soluta quas. Laboriosam eaque enim quaerat labore incidunt! Ad, quas!</span><span>Delectus ipsa quas quidem tempora fugit incidunt est et iste libero quibusdam, eligendi corrupti natus placeat debitis at? Adipisci inventore dolorum deleniti enim laborum nam quasi ipsum aperiam beatae suscipit?</span></p>
+    </div>
+ </div>   
+
+ <div class="sample2">
+    <div class="content-wrap">
+        <p>
+            대한민국은 국제평화의 유지에 노력하고 침략적 전쟁을 부인한다. 헌법개정안이 제2항의 찬성을 얻은 때에는 헌법개정은 확정되며, 대통령은 즉시 이를 공포하여야 한다. 국무위원은 국정에 관하여 대통령을 보좌하며, 국무회의의 구성원으로서 국정을 심의한다. 이 헌법은 1988년 2월 25일부터 시행한다. 다만, 이 헌법을 시행하기 위하여 필요한 법률의 제정·개정과 이 헌법에 의한 대통령 및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, non. Magni sint minima ratione error facere aliquid similique? Deserunt dolorem minus ratione!</p>
+    </div>
+ </div>
+ <style>
+    .sample2{
+        width: 80%;
+        margin: auto;
+
+    }
+     .sample2 p{
+        word-break: keep-all; /*한글 단어단위로 줄바꿈 해줌 */
+        text-align: center; 
+         
+     }
+ </style>
+</body>
+</html>

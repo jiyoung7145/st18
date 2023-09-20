@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- font-family:'Raleway'; -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;700;900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- font-family: 'Noto Sans KR', sans-serif; -->
+
+    <title>float3-2단레이아웃</title>
+    <style>
+        *{box-sizing: border-box;}
+        body,
+        div,
+        span,
+        h1{
+            margin: 0; padding: 0;
+        }
+
+   .body{
+         font-family:'Raleway', 'Noto Sans KR', sans-serif;
+         font-size: 14px;
+         color: #000;
+         line-height: 1.4;
+         /* font: 14px/1.4 'Raleway','Noto Sans KR',sans-serif ;
+         color: #000; */
+        }
+
+        .banner-wrap{
+            /*부모의 컨텐츠 영역을 다사용*/
+            width: 100%; 
+            /* background-color: #ccc; */
+            /* border: 1px solid #000; */
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .banner-wrap .left{
+            width: 60%;
+            /* background-color: #f68; */
+            height: 500px; /*높이는 배경이미지의 크기를 고려해서 지정*/
+            background-image: url(asset/img/main-banner01.jpg);
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: cover;
+            /*배경이미지의 크기를 요소의 크기에 맞게 조정 */
+            border-radius: 0 250px 250px 0;
+           
+        }
+        .banner-wrap .right{
+            width: 40%;
+            padding-left: 100px;
+            /* background-color: #86f; 테스트용 */
+          
+        }
+       .banner-wrap .right span{
+        display: block; /*줄바꿈 주려고 블럭레벨로 전환*/}
+
+      .banner-wrap .right .text1{
+                                 margin-top: 110px;
+                                 font-size: 18px;
+                                  letter-spacing: 2px;}
+      .banner-wrap .right .text2{font-size: 100px;
+                            font-weight:700;
+                            letter-spacing: 2px;}
+                    
+       /* 버튼만들기 */
+      .banner-wrap .right .text3{font-size: 20px;
+                    /* background-color: #fff;                              */
+                    border: 1px solid #000;
+                    display: inline-block; /*블럭레벨은 부모의 너비를 따르기때문에 포함하는 내용의 크기만큼이 요소의 크기와 같게*/
+                    margin: 40px;                                              
+                            }
+      .banner-wrap .right .text3 a{
+        /*부모의 너비를 쓰게하기위해 블럭레벨로 지정 */
+        background-color: #fff;
+        display: block;
+        text-decoration: none;
+        color: #000;
+        /* background-color: #f00; */
+        /* 여백을 a태그에 주고 여백에서 손가락모양이 되게 */
+        padding: 10px 20px;
+      }
+
+      .banner-wrap .right .text3 a:hover{
+        background-color: #000;
+        color: #fff;
+      }
+
+      .banner-wrap .right .text2 span{
+        letter-spacing: -11px;
+        display: inline;
+        padding-right: 20px; /*30옆에 여백을 줌*/
+      }
+      /* 30과 %사이에 자간을 주기위해 */
+       
+       .banner-wrap .left{float: left; }
+       .banner-wrap .right{float: left;}
+
+       .banner-wrap:after{
+            content: '';
+            display: block;
+            clear: both;
+         }
+
+       /* 단처리 */
+
+    </style>  
+    
+    
+
+
+</head>
+<body>
+    <h1>float 연습</h1>
+    <div class="sample">
+        가나다라 마바사아 자차카타파하 가나다라 마바사아 자차카타파하가나다라 마바사아 자차카타파하가나다라 마바사아 자차카타파하가나다라 마바사아 자차카타파하가나다라 마바사아 자차카타파하가나다라 마바사아 
+    </div>
+    <div class="banner-wrap">
+        <div class="left"></div>
+        <div class="right">
+            <!-- span.text.text$*3 -->
+          <span class="text text1">Runway item season off</span>
+          <span class="text text2"><span>30</span>%</span>
+          <span class="text text3">
+            <a href="">Shop Now</a>
+          </span>
+        </div>
+
+    </div>
+</body>
+</html>

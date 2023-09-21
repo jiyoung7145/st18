@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>position ibase 상품목록 연습</title>
+    <title>transform1 라이드 상품목록연습</title>
     <link rel="stylesheet" href="asset/css/cafe24reset.css">
 
     <style>
@@ -30,16 +30,18 @@
             float: left;
             /* display: inline-block; */
             /* float가 선언되면 일반흐름에서 제외 */
+            position: relative;
             background-color: #f68;
             box-sizing: border-box;
             padding:0  10px;  /*배경색이 적용되는 양쪽여백 10px*/
             }
          /* 포지션 연습 */
             .ec-base-product .prdList .thumbnail{
-            position: relative; /*.ec-base-product .prdList >li .icon__box의 기준조상이 되기위해*/
+             position: relative;
+             /*.ec-base-product .prdList >li .icon__box의 기준조상이 되기위해*/
         }
          
-          .ec-base-product .prdList >li .icon__box{
+          .ec-base-product .prdList>li .icon__box{
              /*일반흐름제외, 기준요소 설정*/
             position: absolute;
             right: 0; top: 0;
@@ -48,7 +50,22 @@
           .ec-base-product .prdList >li .icon__box>span{
             display: block;
           }
+          /* transform을 위한 css작성 시작 */
+          .ec-base-product .prdList .descrition{
+            position: absolute;
+            left: 0px; bottom: 0px;
+            background-color: rgba(255,255,255,0.5);
+            width: 100%; /*일반흐름에서 제외되었지만 기준조상으로 너비를 가져옵니다*/
+            padding: 1em;
+            box-sizing: border-box;
+          }
 
+          /* transform 설정 시작 */
+        
+          .ec-base-product .prdList .descrition{
+            /*본인요소의 크기만큼의 위치변형*/
+           
+          }
     </style>
 </head>
 <body>
@@ -69,11 +86,18 @@
                       
                 <span class="benefit"></span>
               </div>
-             <div class="descrition"></div>
+             <div class="descrition">
+                <div class="name">상품명</div>
+                <ul class="space">
+                 <li>8000원</li>
+                 <li>6000원</li>
+                </ul>
+                <div class="icon">아이콘</div>
+                </div>
+                             
+             
             </li>
-           
-           
-      
+              
             <li class="xans-record-">
                 <div class="thumbnail">
                     <a href=""><img src="asset/img/f46d04dc642d3b8507058c347ccf4fb0.jpg" alt=""></a>
@@ -84,41 +108,68 @@
                       
                 <span class="benefit"></span>
               </div>
-             <div class="descrition"></div>
+             <div class="descrition">
+                <div class="name">상품명</div>
+                <ul class="space">
+                 <li>8000원</li>
+                 <li>6000원</li>
+                </ul>
+                <div class="icon">아이콘</div>
+                </div>
+                             
+            
             </li>
-           
+
+            <li class="xans-record-">
+                <div class="thumbnail">
+                    <a href=""><img src="asset/img/f46d04dc642d3b8507058c347ccf4fb0.jpg" alt=""></a>
+                    <div class="icon__box">
+                        <span class="cart"><img src="asset/img/icon_202107202127542500.png" alt=""></span>
+                        <span class="wish"><img src="asset/img/icon_202107191654165100.png" alt=""></span>
+                    </div>
+                      
+                <span class="benefit"></span>
+              </div>
+             <div class="descrition">
+                <div class="name">상품명</div>
+                <ul class="space">
+                 <li>8000원</li>
+                 <li>6000원</li>
+                </ul>
+                <div class="icon">아이콘</div>
+                </div>
+                             
+            
+            </li>
+
+            <li class="xans-record-">
+                <div class="thumbnail">
+                    <a href=""><img src="asset/img/f46d04dc642d3b8507058c347ccf4fb0.jpg" alt=""></a>
+                    <div class="icon__box">
+                        <span class="cart"><img src="asset/img/icon_202107202127542500.png" alt=""></span>
+                        <span class="wish"><img src="asset/img/icon_202107191654165100.png" alt=""></span>
+                    </div>
+                      
+                <span class="benefit"></span>
+              </div>
+             <div class="descrition">
+                <div class="name">상품명</div>
+                <ul class="space">
+                 <li>8000원</li>
+                 <li>6000원</li>
+                </ul>
+                <div class="icon">아이콘</div>
+                
+                             
+             </div>
+            </li>
+        
            
      
-            <li class="xans-record-">
-                <div class="thumbnail">
-                    <a href=""><img src="asset/img/f46d04dc642d3b8507058c347ccf4fb0.jpg" alt=""></a>
-                    <div class="icon__box">
-                        <span class="cart"><img src="asset/img/icon_202107202127542500.png" alt=""></span>
-                        <span class="wish"><img src="asset/img/icon_202107191654165100.png" alt=""></span>
-                    </div>
-                      
-                <span class="benefit"></span>
-              </div>
-             <div class="descrition"></div>
-            </li>
            
-           
-      
-            <li class="xans-record-">
-                <div class="thumbnail">
-                    <a href=""><img src="asset/img/f46d04dc642d3b8507058c347ccf4fb0.jpg" alt=""></a>
-                    <div class="icon__box">
-                        <span class="cart"><img src="asset/img/icon_202107202127542500.png" alt=""></span>
-                        <span class="wish"><img src="asset/img/icon_202107191654165100.png" alt=""></span>
-                    </div>
-                      
-                <span class="benefit"></span>
-              </div>
-             <div class="descrition"></div>
-            </li>
-           
+        </ul>
          
-             </div>
+        </div>
             
     </div>
 </body>

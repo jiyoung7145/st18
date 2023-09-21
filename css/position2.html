@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position2</title>
+</head>
+<style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+        margin: 100px;
+        padding: 100px;
+        border: 10px dotted #000;
+        background-color: #ccc;
+        position: relative; /*.box3의 기준조상이 되기위해서 포지션정해줌*/
+        box-sizing: border-box;
+        height: 2000px;
+    }
+    .box:nth-child(even){background-color: #f68; }
+    .box:nth-child(odd){background-color: #86f;}
+    .box{
+        width: 200px; height: 200px;
+    }
+    .box1{
+        position: static;
+        left: 100px; top: 100px; /*static은 left right top 영향 안받음*/
+    }
+    .box2{
+        /*일반흐름*/
+        position: relative; /*기본위치: 원래자신의 위치, 위치지정이 가능  왼쪽 -x 오른쪽 +x  위 -y 아래 +y*/
+        left: 50px; top: -50px;
+    }
+    .box3{
+        position: absolute; /*일반흐름에서 제외 기준위치 조상중에 position값이 relative, fixed, absolute가 지정되어있는 가까운 조상*/
+        left: 0px; top: 0px;
+        padding: 50px;
+        box-sizing: border-box;
+        /* background-color: #f00; */
+        border: 1px solid #000;
+        background-color: #f00;
+    padding: 16px;
+    }
+   .box .inner{
+    /* background-color: #f00;
+    padding: 16px; */
+   }
+   .box .inner p{
+    background-color: #00f;
+    position: absolute; /*일반흐름에서 제외 너비는부모로부터 못받고 내높이를 부모에게 줄수없게됨 그래서 너비를 지정해줘야함  위치지정가능, 기준위치 확인*/
+    /* left: 0px; top: 0; */
+    right: 20px; bottom: 20px; /*요소안으로 들어오면 + 요소밖은 -*/
+   }
+   .box4{
+    position: fixed;/*일반흐름에서 제외 ->레이어개념을 위치가능, 기준위치-뷰포트 */
+    left: 0; top: 0;
+   }
+   .box5{
+    position: fixed;
+    right: 0; bottom: 0;
+   }
+   .box6{
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;}
+</style>
+<body>
+    <div class="wrap">
+        <div class="box box1">
+            <div class="inner">
+                <p>box1</p>
+            </div>
+        </div>
+        <div class="box box2">
+            <div class="inner">
+                <p>box2</p>
+            </div>
+        </div>
+        <div class="box box3">
+            <div class="inner">
+                <p>box3</p>
+            </div>
+        </div>
+        <div class="box box4">
+            <div class="inner">
+                <p>box4</p>
+            </div>
+        </div>
+        <div class="box box5">
+            <div class="inner">
+                <p>box5</p>
+            </div>
+        </div>
+        <div class="box box6">
+            <div class="inner">
+                <p>box6</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

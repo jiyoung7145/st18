@@ -14,7 +14,7 @@
         .ec-base-product{}
         .ec-base-product .prdList{
             background-color: #ccc;
-            overflow: hidden; /*floae가 지정된 li를 인식하기 위해*/
+            overflow: hidden; /*float가 지정된 li를 인식하기 위해 */
         }
         .ec-base-product .prdList:after{
             content: '';
@@ -54,7 +54,7 @@
           .ec-base-product .prdList .descrition{
             position: absolute;
             left: 0px; bottom: 0px;
-            background-color: rgba(255,255,255,0.5);
+            background-color: rgba(255,0,0,0.5);
             width: 100%; /*일반흐름에서 제외되었지만 기준조상으로 너비를 가져옵니다*/
             padding: 1em;
             box-sizing: border-box;
@@ -63,9 +63,23 @@
           /* transform 설정 시작 */
         
           .ec-base-product .prdList .descrition{
+            transform: translate(0, 100%); /*hover 안했을때 값설정*/
+            transition: all 0.1s;
             /*본인요소의 크기만큼의 위치변형*/
            
           }
+          /* transition 설정 */
+          /* li에 마우스를 오버하면 .desctption의 원위치로 올라가면 .desctption 위치변화 부모에게 변화를 줘야됨 */
+          .ec-base-product .prdList >li:hover .descrition{
+            transform: translate(0, 0);
+            background-color: rgba(188, 183, 183, 0.9);
+            transition: all 0.5s;
+
+          }
+
+          
+
+
     </style>
 </head>
 <body>

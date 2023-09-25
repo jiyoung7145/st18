@@ -38,24 +38,25 @@
     }
 
     .box ul li a::after{
+            background-color: #000;
             content: ''; /*반드시 있어야함*/
             position: absolute;
             left: 0; bottom: 0;
             display: block;
             width: 100%;
-            background-color: #000;
             height: 4px;
             /* 원크기에서 scale을 0조정 */
             transform: scale(0);
-            transform-origin: 0 0; /* 구분자 : 수평 공백 수직*/
+            transform-origin: 100% 0; /* 구분자 : 수평 공백 수직*/
+            transition:transform 0.4s;
     }
     
     .box ul li:hover a::after{
         /* li에 마우스를 오버하면 .box ul li:hover a::after의 스케일(1) 변형 */
         transform: scale(1);
-        transition: all 1s; /*값이 숫자면 모두변경해준다*/
+        transition: transform 1s; /*값이 숫자면 모두변경해준다*/
         background-color: rgba(255,0,0,0.5);
-        /* transform-origin: 100% 0; */
+        transform-origin: 0 0;
        
     }
    

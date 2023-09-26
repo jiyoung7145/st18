@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex2번스타일</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        .wrap{
+            margin-top: 50px;           
+        }
+        
+        header .inner{
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: #ccc;
+        }
+        header .container{
+            display: flex;
+            font-display: row;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        header.container>div{
+            background-color: dodgerblue 1px solid #000;
+        }
+        header .logo{
+            min-height: 100px;
+        }
+
+        .inner{
+        }
+    </style>
+</head>
+<body>
+       <div class="wrap">
+        <header>
+       <div class="inner container">
+        <div class="logo">logo</div>
+        <div class="top-menu">top-menu</div>
+       </div>
+    </header>
+    </div>
+    </body>
+</html>

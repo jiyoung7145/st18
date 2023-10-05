@@ -143,10 +143,6 @@ html {
     flex-direction: column;
 }
 
-.item{
-    background-color: rgba(0,0,255,0.5); /*테스트*/
-    border: 1px solid #000;
-}
 
 .test{
     background-color: #00f;
@@ -158,13 +154,19 @@ html {
 header{
     position: fixed;
     width: 100%;
+    height: 80px;
     background-color: rgba(255,255,255,0.3);
-    border: 1px solid #000;
     height: var(--header-height);
+}
+/* 햄버거메뉴를 클릭하면 header에 .active추가  */
+header.active{
+  background-color: var(--primary-color);
+
 }
 
 .header_wrap{
     max-width: 1440px;
+    height: 100%; /*10.5 추가*/
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
@@ -173,20 +175,22 @@ header{
 
 
 
-/* .container */
-.container{
-    padding: 80px 0 160px;
-    background-color: #ccc; /*테스트용*/
-}
-
 .header_wrap .header_logo a{
-    display: block;
-    width: 90px; height: 20px;
-    background: url(../image/header_logo.png) no-repeat 50% 50%;
+  display: block;
+  width: 90px; height: 20px;
+  background: url(../image/header_logo.png) no-repeat 50% 50%;
+}
+header.active .header_wrap .header_logo a{
+  background-image: url(/st18/naver/asset/image/header_logo_v2.png);
 }
 
 .header_wrap nav{
   height: var(--header-height);
+  
+}
+
+header.active{
+  display: none;
 }
 
 nav .gnb_menu{
@@ -199,7 +203,7 @@ nav .gnb_menu .gnb_menu_list_recruit
   display: inline-block;
   
 }
-nav .gnb_menu .gnb_menu_list a.gnb_menu_item{
+nav .gnb_menu a.gnb_menu_item{
   position: relative; /*nav .gnb_menu .gnb_menu_list:hover a.gnb_menu_item::before 기준조상*/
   display: block;
   font-size: 15px;
@@ -232,7 +236,11 @@ nav .gnb_menu .gnb_menu_list:hover a.gnb_menu_item::before{
   transform-origin: 0 0;/*왼쪽에서 나타나게 함*/
 
 }
-
+/* 
+li마우스오버시 ul.gnb_dropMenu_wrap
+display:none;과 
+display:flex;로 화면표시 제어
+*/
 
 nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap{
   /* depth2 d1 마우스오버(마우스엔터)할때 드롭다는 되는 메뉴 */
@@ -243,37 +251,69 @@ nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap{
    background-color: var(--primary-color);
   /* gnb_dropMenu_wrap>li가 수평으로 오게 선언 */
    display: none; /*테스트 후 flex로 처리*/
- 
+   /* display: flex; */
+   flex-direction: row;
+   justify-content:center;
+   align-items: stretch;  
+   
   /* depth2
   d1 마우스 호버할 때 드롭다운 되는 메뉴 */
 }
 /* 1번 메뉴를 위한 테스트 선택자 */
-nav .gnb_menu .gnb_menu_list:nth-child(1) ul.gnb_dropMenu_wrap{
+/* .gnb_menu_list:nth-child(5) 1~7번으로 확인하면서 체크 */
+nav .gnb_menu .gnb_menu_list:nth-child(5) ul.gnb_dropMenu_wrap{
   
-  display: flex;
+  /* display: flex;
   justify-content:center;
-  
+   */
 }
+
 nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap>li{
+  position: relative; /*nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap>li::beforer 기준*/
   font-size: 14px;
   width: 190px; 
   height: 367px;
   padding: 28px 0 0;
   
 }
+/* 세로줄 시작 */
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap>li:last-child::after
+{
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0; top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255,255,255,0.2);
+}
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap>li::before
+{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0; top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255,255,255,0.2);
+}
+/* 세로줄 끝 */
+
 nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap> li:hover{
    background-color: var(--primary-color-dark);
 
 }
   
+
 nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu{
-  padding-left: 2em;
+  /* padding-left: 2em; */
 }
 nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu .depth_blank{
   margin-bottom: 14px;
 }
 nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu>li{
   margin-bottom: 7px;
+  padding-left: 20px;
 }
 nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu .gnb_dropMenu_item{
   color: #fff;
@@ -286,3 +326,127 @@ nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu_item span{
   opacity: 0.8;
 }
  
+nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .classify{
+  margin-bottom: 20px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 20px;
+}
+nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .classify:first-child{
+  padding-top: 0;
+  border-top: 0 none;
+}
+
+.header_util{
+  /* .header_util .header_lang
+  .header_util .sitemap_box 를 flex item를 만들기 위해 */
+  display: flex;
+}
+.header_util .header_lang{
+  margin-right: 2em;
+}
+
+.header_util .header_lang a{
+  color: #000;
+  font-size: 12px;
+  padding: 0 0.5em;
+  position: relative;
+  opacity: 1;
+}
+
+header.active .header_util .header_lang a{
+  color: #fff;
+}
+
+.header_util .header_lang a:first-child:after{
+  content: '';
+  position: absolute;
+  right: -3px; top: 0;
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: #000;
+}
+
+header.active .header_util .header_lang a:first-child:after{
+  background-color: #fff;
+}
+
+
+.header_util .header_lang a[aria-selected="false"]{
+  opacity: 0.7;
+}
+
+
+.header_util .sitemap_box{
+  position: relative; /*.header_util .header_lang의 기준*/
+  width: 24px;
+  height: 24px;
+  
+}
+
+.header_util .sitemap_box .btn_sitemap{
+  width: 100%; 
+  height: 100%;
+  background-color: transparent;
+  border: 0px none;
+  cursor: pointer; /*마우스포인터를 손가락모양*/
+
+}
+.header_util .sitemap_box .btn_line{
+  position: absolute;
+  right: 0; 
+  display: block;
+  width: 24px; height: 2px;
+  background-color: #000;
+  transition: all 0.2s;
+}
+.header_util .sitemap_box:hover .btn_line{
+  background-color: var(--primary-color);
+}
+
+.header_util .sitemap_box .btn_line:nth-of-type(2){
+  top: 2px;
+  
+}
+.header_util .sitemap_box .btn_line:nth-of-type(3){
+  top: 10px;
+  
+}
+.header_util .sitemap_box .btn_line:nth-of-type(4){
+  top: 18px;
+}
+/* 사용자가 햄버거 메뉴를 클릭한 상태 
+header.active*/
+header.active .header_util .sitemap_box .btn_line{
+  background-color: #fff;
+  transition: all 0.2s;
+}
+
+header.active .header_util .sitemap_box .btn_line:nth-of-type(2){
+    transform: rotate(-45deg) translate(-8px, 8px) ;
+}
+header.active .header_util .sitemap_box .btn_line:nth-of-type(3){
+ opacity: 0;
+ }
+header.active .header_util .sitemap_box .btn_line:nth-of-type(4){
+   transform: rotate(45deg) translate(-3px, -4px) ;
+}
+
+header .sitemap{
+  display: none;
+  position: fixed;
+  left: 0; top: var(--header-height);
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background-color: var(--primary-color);
+}
+header.active .sitemap{
+  display: block;
+}
+
+/* .container */
+.container{
+  padding: 80px 0 160px;
+  background-color: #ccc; /*테스트용*/
+}
+

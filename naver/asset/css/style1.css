@@ -189,7 +189,7 @@ header.active .header_wrap .header_logo a{
   
 }
 
-header.active{
+header.active .header_wrap nav{
   display: none;
 }
 
@@ -315,16 +315,18 @@ nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu>li{
   margin-bottom: 7px;
   padding-left: 20px;
 }
-nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu .gnb_dropMenu_item{
+
+nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .gnb_dropMenu_item{
   color: #fff;
 }
-nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu_item strong span{
+nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .gnb_dropMenu_item strong span{
   opacity: 1;
   font-weight: bold;
 }
-nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu_item span{
+nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .gnb_dropMenu_item span{
   opacity: 0.8;
 }
+
  
 nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .classify{
   margin-bottom: 20px;

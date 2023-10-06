@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>클론코딩-네이버</title>
+    <!-- Swoper 관련 css -->
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <!-- 내 css -->
     <link rel="stylesheet" href="asset/css/style1.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -20,7 +25,7 @@
 
         </script>
         <!-- header -->
-        <header class="header_down active">
+        <header class="header_down">
             <div class="header_wrap flex-container">
                 <h1 class="header_logo item">
                     <a href="/"><span class="blind">네이버</span></a></h1>
@@ -390,9 +395,94 @@
          <!-- //header -->
          <!-- container -->
          <div class="container">
-         <div class="test"></div>
+            <!-- main_slide -->
+           <div class="main_slide swiper">
+             
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="asset/image/img_main_slide7.jpg" alt="">
+    <div class="slide-info"><a href="https://campaign.nbilly.naver.com/navergenerativeai" target="_blank" class="slide_info_box">
+        <h2 class="slide_logo teamnaver"><span class="blind">NAVER GENERATIVE AI</span></h2>
+        <div class="slide_text_box">
+            <p class="slide_title"><strong>모두의 기술 경쟁력, 네이버 AI</strong></p>
+            <p class="slide_text"><span>모두가 AI를 일상의 경쟁력으로 누릴 수 있도록,<br>팀네이버의 생성형 AI 생태계에서 당신만의 기회를 발견하세요.</span></p>
+        </div>
+    </a></div>
+    </div>
+    <div class="swiper-slide"><img src="asset/image/img_main_slide10.jpg" alt="">
+     <div class="slide-info">
+        <a href="https://1784.navercorp.com" target="_blank" class="slide_info_box" >
+            <h2 class="slide_logo"><span class="blind">네이버 1784</span></h2>
+            <div class="slide_text_box">
+                <p class="slide_title"><strong>네이버 1784에서<br>우리는 혁신을 현실로 만들고 있습니다.</strong></p>
+                <p class="slide_text"><span>네이버의 다양한 기술들로 실험과 도전, 융합을 통해<br>새로운 기회와 가능성을 만들어 갑니다.</span></p>
+            </div>
+        </a>
+     </div>
+    </div>
+    <div class="swiper-slide"><img src="asset/image/img_main_slide9.jpg" alt="">
+     <div class="slide-info">
+        <a href="https://campaign.naver.com/smefullcare/online/" target="_blank" class="slide_info_box">
+            <h2 class="slide_logo naver"><span class="blind">네이버 로고</span></h2>
+            <div class="slide_text_box">
+                <p class="slide_title"><strong>사업의 시작부터 성장까지<br>네이버 SME 풀케어시스템이 함께합니다.</strong></p>
+                <p class="slide_text"><span>사업자를 지원하고 응원하는 네이버 시스템이 사장님의 경쟁력이 됩니다</span></p>
+            </div>
+        </a>
+     </div>
+    </div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-scrollbar"></div>
+  
+
+           </div>
+
+           <!-- main_content -->
+            <div class="main_content">
+
+
+            </div>
+           
          </div>
           <!-- //container -->
     </div>
+
+    <!-- swiper js 플러그인 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- swiper .test1 연결 -->
+  <script>
+    const swiper_mainSlide = new Swiper('.main_slide', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true, /*반복*/
+  
+  autoplay: {
+    delay: 25000,
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+        // type: 'progressbar', //블릿대신 진행바 표시
+  },
+ // Navigation arrows
+    navigation:  {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+
+
+});
+  </script>
+
 </body>
 </html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper 연습3</title>
+    <!-- 스와이퍼 플러그인 css -->
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+  <!-- 스와이퍼 플러그인 js설치-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <style>
+        *{margin: 0px; padding: 0; box-sizing: border-box;}
+        .wrap{
+            width: 1000px;
+            margin: 50px auto 0;
+            /* border: 1px solid #000; */
+        }
+        .test1{
+            width: 100%;
+        }
+        .test1 .swiper-wrapper{}
+        .test1 .swiper-wrapper .swiper-slide{
+            /* border: 1px solid #f00; */
+        }
+        .test1 .swiper-wrapper .swiper-slide img{
+            display: block;
+            width: 100%; /*무조건 부모의 너비를 따른다*/
+            min-width: 100%; /*부모의 너비를 따르지만 원래 이미지크기보다는 커지지 말아라*/
+        }
+     /* pagination 위치 변경 */
+      .swiper-horizontal>.test1 .swiper-pagination-bullets, 
+      .test1 .swiper-pagination-bullets.swiper-pagination-horizontal, 
+      .test1  .swiper-pagination-custom, 
+      .test1  .swiper-pagination-fraction{
+        top:auto;
+        bottom:2em;
+      }
+/* pagination css 변경 */
+        .test1 .swiper-pagination-bullet{
+            background-color: #fff;
+            opacity: 0.8;
+            border-radius: 0;
+            width: 30px;
+            height: 4px;
+        }
+        .test1 .swiper-pagination-bullet-active{
+            background-color:rgb(151, 72, 7);
+            opacity: 1;
+             width: 30px;
+        }
+/* 화살색 변경 
+        화살은 아이콘폰트으로 작성되어 있어요
+      */
+        .test1 .swiper-button-next,
+        .test1 .swiper-button-prev{
+            color: #fff;
+        }
+ /* 스크롤바 변경 */
+      /* 스크롤전체크기 */
+      .test1 .swiper-scrollbar{
+        background-color: rgba(91, 54, 16, 0.2);
+      }
+      /* 스크롤진행상태 */
+      .test1  .swiper-scrollbar-drag{
+        background-color: rgb(151, 72, 7);
+      }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="swiper test1">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="../naver/asset/image/메인베너1 완료.jpg" alt="스와이프연습1"></div>
+              <div class="swiper-slide"><img src="asset/image/메인베너2 완료.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="asset/image/추석배너완성.jpg" alt=""></div>
+             
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+       
+           
+          </div>
+    </div>
+    <script>
+        //내꺼에 맞춰서
+        const test1 = new Swiper('.test1', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+
+});
+    </script>
+
+</body>
+</html>

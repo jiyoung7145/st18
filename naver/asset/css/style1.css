@@ -173,7 +173,19 @@ header.active{
     align-items: center;
    
 }
-
+@media (max-width:1400px){
+  .header_wrap{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (max-width:992px){
+  .header_wrap{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+ 
 
 
 .header_wrap .header_logo a{
@@ -190,6 +202,13 @@ header.active .header_wrap .header_logo a{
   
 }
 
+/*.header_wrap nav 미디어 쿼리  */
+@media (max-width:1200px){
+  .header_wrap nav{
+    display: none !important;
+  }
+
+}
 header.active .header_wrap nav{
   display: none;
 }
@@ -454,7 +473,15 @@ header.active .sitemap{
 }
 
 
-.main_slide{}
+.main_slide{
+  height: 750px;
+}
+
+@media (max-width:768px){
+  .main_slide{
+    height: calc(100vh - var(--header-height)); /*.main_slide 높이를 강제로 지정*/
+  }
+}
 
 /* swiper 수정 */
 .main_slide .swiper-button-next,
@@ -463,6 +490,13 @@ header.active .sitemap{
   background: url(../image/sprite.png) no-repeat;
   top: auto; bottom: 220px;
   }
+  @media (max-width:768px){
+    .main_slide .swiper-button-next,
+    .main_slide .swiper-button-prev{
+      display: none;
+    }
+  }
+
 .main_slide .swiper-button-prev{
   background-position: -294px -96px;
   left: calc(150px - 50px - 10px);
@@ -482,10 +516,15 @@ header.active .sitemap{
 
 /* swipwer slide  */
 .main_slide .swiper-slide{}
-.main_slide .swiper-slide>img{
+.main_slide .swiper-slide picture{  /*미디어쿼리하면서 추가*/
+  display: block;
+  width: 100%; height: 100%;
+}
+.main_slide .swiper-slide picture>img{/*미디어쿼리하면서 선택자 수정*/
   display: block;
   width: 100%; height: 100%;
   object-fit: cover;
+  object-position: center; /*추가 이미지가 가운데를 중심으로 표시*/
 }
 
 .main_slide .swiper-scrollbar{
@@ -497,7 +536,7 @@ header.active .sitemap{
   overflow: hidden;
 }
 
-.main_slide.swiper-scrollbar-drag{
+.main_slide .swiper-scrollbar-drag{
   background-color: #fff;
   /* position: relative; 기본 swiper css에 지정되어 있어요 */
 }
@@ -560,13 +599,27 @@ header.active .sitemap{
   line-height: 1.6;
 }
 
+@media (max-width:768px){
+  .main_slide .slide-info .slide_text_box{
+    padding: 0 50px 0px;
+  }
+  .main_slide .slide-info .slide_text_box .slide_title{
+    font-size: 2em;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+  }
+  .main_slide .slide-info .slide_text_box .slide_text{
+    display: none;
+  }
+
+}
+
 /* pagination 내가 위치지정한 것 */
-.main_slide .swiper-pagination{
+/* .main_slide .swiper-pagination{
   position: absolute;
   left: calc(-50% + 170px); bottom: 110px;
   
  
-}
+} */
 .main_slide .swiper-pagination-fraction{
   color: #fff;
   font-size: 0;
@@ -584,4 +637,20 @@ header.active .sitemap{
 .main_slide .swiper-pagination-fraction .swiper-pagination-total{
   font-size: 12px;
   overflow: 0.7;
+}
+@media (max-width:768px){
+  .main_slide .swiper-scrollbar{
+    bottom: calc(150px + 20px);
+     left: calc(50px + 50px); right: 50px;
+     width: calc(100% - 50px - 50px - 50px);
+  }
+  .main_slide .swiper-pagination-fraction{
+    top:auto;
+    bottom: calc(150px + 14px);
+    left: 50px; 
+    width: auto;
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+  }
+
+
 }

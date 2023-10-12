@@ -672,12 +672,14 @@ header.active .sitemap{
   .main_content{
     padding: 120px var(--padding-h-m);
   }
+
 }
 
 
 
 .main_content ul.content_summary{
          display: flex;
+         flex-wrap: wrap; /*추가 미디어쿼리를 위해서 992px이하에서 */
          /* flex-direction: row;
          justify-content: flex-start;
          align-items: stretch; */
@@ -715,15 +717,44 @@ header.active .sitemap{
 
 @media (max-width:992px){
 /* 2단 */
+.main_content{
+  padding-top: 150px;
+}
 .content_summary li.summary_container{
   width: 50%;
-  }
+  margin-bottom: 50px;
+    }
+    .content_summary li.summary_container:first-child{
+     width: 50%;
+    }
+    .content_summary li.summary_container:last-child{
+     width: 50%;
+    
+    }
+    .content_summary li.summary_container:nth-of-type(2):after{
+      display: none;
+    }
+    .content_summary li.summary_container:nth-of-type(3){
+      padding-left: 0px;
+    }
+   
 }
-@media (max-width:769px){
+@media (max-width:768px){
 /* 1단 */
 .content_summary li.summary_container{
+  
   width: 100%;
-  }
+  padding: 0;
+}
+.content_summary li.summary_container::after{
+  display: none;
+}
+  .content_summary li.summary_container:first-child{
+    width:100%;
+   }
+   .content_summary li.summary_container:last-child{
+    width:100%;
+   }
 }
 
 .content_summary li.summary_container:last-child:after{
@@ -776,12 +807,12 @@ header.active .sitemap{
 }
 
 .content_summary .news_box .news_title{
-  display: block; /*마진여백을 주기위해서 선언*/
   color: #000;
   font-size: 15px;
   font-weight: bold;
   margin-bottom: 1em; 
   white-space:nowrap;
+  display: block; /*마진여백을 주기위해서 선언*/
   overflow : hidden;
   text-overflow: ellipsis; /*한 줄 말줄임*/
 }
@@ -842,6 +873,66 @@ header.active .sitemap{
   text-align: right; /*p태그라 부모의 영역을 다쓰기때문에*/
  }
  
- .content_summary .summary_title{}
- .content_summary .summary_title{}
 
+ /* .content service */
+ .content_service{
+  margin-top: 100px;
+ }
+ /* ul */
+ .content_service .service_list_container{
+  display: flex;
+  flex-wrap: wrap; /*줄바꿈함*/
+ 
+
+ }
+ /* li */
+ .content_service .service_list_container .service_thumnail_box{
+  position: relative; /*.description 기준요소*/
+  /* flax item */
+  /* 기본값 flex-grow: 0; flex-shrink: 1; flex-basis: auto; */
+  flex: none; /*flex-grow: 0; flex-shrink: 0; flex-basis: auto;*/
+  width: 33.333%; /*3단설정*/
+  overflow: hidden; /*.description transform: translateY(100%) 주고나서 안보이게할때*/
+ }
+ .content_service .service_list_container .service_thumnail_box{}
+
+ .content_service .service_thumnail_box .thumnail{}
+ .content_service .service_thumnail_box .thumnail a{
+  display: block; /*부모의 너비를 따르게됨*/
+ }
+ .content_service .service_thumnail_box .thumnail a img{
+  display: block; width: 100%;
+
+ }
+ .content_service .service_thumnail_box .description{
+  position: absolute;
+  left: 0; bottom:  0; 
+  transform: translateY(100%); /*내크기만큼 내려오게 함*/
+  width: 100%; height: auto;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-bottom: 2em;
+  /* background-color: rgba(0,0,0,0.5);  */
+ }
+ .content_service .service_thumnail_box:hover .description{
+  transform: translateY(0); /*마우스 오버시thumnail_box 위치변경 */
+  transition: transform 0.2s;
+ }
+
+ .content_service .service_thumnail_box .description dl{
+  color: #fff;
+
+ }
+ .content_service .service_thumnail_box .description dl dt{
+  font-size: 22px;
+  margin-bottom: 2px;
+ }
+ .content_service .service_thumnail_box .description dl dd{
+   /*한 줄 말줄임*/
+  display: block;
+  white-space:nowrap;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  /*한 줄 말줄임 설정 끝*/
+ }
+ 

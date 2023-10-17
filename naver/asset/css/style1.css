@@ -178,7 +178,15 @@ html {
     min-height: 100px;
 }
 
+/* 레이아웃 */
+#wrap{
+  position: relative;
+  min-height: 100%;
+}
 
+
+
+/* mainpage */
 /* header */
 header{
     position: fixed;
@@ -1161,3 +1169,57 @@ header.active .sitemap{
     width: calc(100% - 80px);
    }
 }
+
+/*footer*/
+footer{
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%;
+  background-color: #efefef;
+ 
+}
+   
+
+footer .footer_wrap{ /*정렬용으로*/
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+   border: 1px solid #000;
+  padding: 70px 0;
+ }
+
+footer strong.footer_logo{
+  width: 63px;
+  height: 13px;
+  background: url(../image/footer_logo.png) no-repeat;
+   background-size: 63px 13px;
+   order: 1;
+   
+}
+  footer .footer_menu{
+    display: flex;
+    order: 2;
+    margin-left: 2em;
+  }
+  footer .affiliate_box{
+    order: 4;
+    margin-left: auto;
+  }
+  footer .footer_copy{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+  
+
+  footer .affiliate_box .btn_.affiliate{}
+  footer .affiliate_box .affiliate_list{
+    position: absolute;
+  }
+  footer .affiliate_box .affiliate_item{}
+ 
+  
+footer .footer_wrap .affiliate_list{
+  
+}
+

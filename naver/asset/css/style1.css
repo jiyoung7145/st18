@@ -149,6 +149,7 @@ html {
 .text_line-rt,
 .text_line-rm{
   display: block;
+  word-break: keep-all; /*한중일 경우 단어단위로 줄바꿈*/
 }
 
 
@@ -158,7 +159,9 @@ html {
    display: inline;
 }
 
-
+@media (max-width:1200px){
+  .text_line{display: inline;}
+}
 
 @media (max-width:768px){
   .text_line-rt{display: inline !important;}
@@ -1039,18 +1042,122 @@ header.active .sitemap{
 .content_support .support_info_top .support_text{
   font-size: 18px;
   line-height: 1.6;
+ 
 }
 
 /* .support_list_contanier가 수평으로 나란히 표시 */
 .content_support .support_list_contanier{
   display: flex;
+  padding-bottom: 50px;
   
 }
 .content_support .support_list_contanier .support_list_box{
-  border: 1px solid #000;
-  flex: none;
+  flex: none; /*크기고정 줄어들지도 늘어나지도 않으면서 width값 따름*/
   width: 25%;
+   position: relative;
 }
-.content_support .support_list_box dl{}
-.content_support .support_list_box dd{}
-.content_support .support_list_box dt{}
+.content_support .support_list_box:after{
+  content: '';
+  position: absolute;
+ right: 0; top: 0; width: 1px; height: 100%;
+ background-color: #dcd9d9;
+}
+.content_support .support_list_box:last-child::after{
+  display: none;
+}
+
+.content_support .support_list_box a{
+  display: block;
+  padding: 135px 10px 0;
+  text-align: center;
+  position: relative;
+}
+.content_support .support_list_box a::after{
+  content: '';
+  position: absolute;
+  left: 50%; top: 0;
+  height: 100px;
+  transform: translate(-50%, 0); /*요소가 크기랑 상관없이 가운데 위치*/
+  background-image: url(../image/sprite.png);
+  background-repeat: no-repeat;
+  
+  }
+  .content_support .support_list_box a.creators::after{
+    width: 87px;
+    background-position: 0px -957px;
+  }
+  .content_support .support_list_box a.business::after{
+    width: 101px;
+    background-position: -92px -957px;
+  }
+  .content_support .support_list_box a.developers::after{
+    width: 110px;
+    background-position: -199px -957px;
+  }
+  .content_support .support_list_box a.flower::after{
+    width: 93px;
+    background-position: -316px -957px;
+  }
+
+
+.content_support .support_list_box dt{
+  color: var(--primary-color);
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+.content_support .support_list_box:hover dt{
+  text-decoration: underline;
+}
+.content_support .support_list_box dd{
+  font-size: 15px;
+  color: #999;
+  word-break: keep-all; /*회사소개, 상세페이지 코맨트 단어단위로 줄바꿈*/
+}
+
+@media (max-width:1024px){
+  /* easy 스킨에서 사용하는 모바일에서 수평으로 표시되며 스크롤 되게 처리 */
+  .content_support .support_list_contanier{
+    
+    /* 선수조건 - 반드시 있어야함 */
+    overflow-x: auto;
+    /* 스크롤시 동작 설정 */
+    scroll-snap-type: x mandatory;
+    /* 자식요소에 설정 필요 */
+      }
+      .content_support .support_list_contanier::-webkit-scrollbar{
+       
+        /* 스크롤바 없애기 */
+        /* display: none; */
+        width: 100%; 
+        height: 5px;
+        background-color: rgba(149, 146, 146, 0.5);
+      }
+      .content_support .support_list_contanier::-webkit-scrollbar-thumb{
+        background-color: rgba(90, 90, 90, 0.5);
+      }
+
+
+  .content_support .support_list_box{
+    min-width: 300px;
+    width: calc(33.33vw + 50px);
+    /* 스크롤시 스냅 */
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width:768px){
+  /* 화면에 1+ */
+  .content_support .support_list_box{
+    min-width: 320px;
+    width: calc(50vw + 100px);
+  }
+}
+
+@media (max-width:576px){
+   /* 화면에 1+ */
+   .content_support .support_list_box{
+    min-width: 320px;
+    width: calc(100% - 80px);
+   }
+}

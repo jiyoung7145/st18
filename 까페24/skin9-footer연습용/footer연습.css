@@ -1,0 +1,61 @@
+/*footer 수정 css*/
+#footer{
+   --my-footer-logo-width:400px;
+}
+#footer .inner{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* #footer 1 content */
+#footer .inner .bt_logo{
+    order:1;
+    flex:none;
+    max-width: 400px; /*디자인에 따라 수정*/
+    min-width: ;
+    box-sizing: border-box;
+}
+/* #footer 3 content  */
+#footer .inner .bt_ntil{
+    flex:none;
+    order:2;
+    width:var(--my-footer-logo-width);
+    box-sizing: border-box;
+}
+
+/* #footer g- content  */
+#footer .inner .bt_wrap{
+    order:4;
+    box-sizing: border-box;
+    width: calc(100% - vay(--my-footer-logo-width));
+}
+#footer .inner .bt_wrap .bt_info{}
+#footer .inner .bt_wrap .bt_info .title{display: none;}
+#footer .inner .bt_wrap .bt_cscenter{}
+#footer .inner .bt_wrap .bt_bank{
+    display: none;
+}
+
+/* #footer content  */
+#footer .inner .bt_escrow{
+    order:5;
+    box-sizing: border-box;
+}
+#footer .inner .bt_wrap2{
+    order:3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: var(--my-footer-logo-width);
+    box-sizing: border-box;
+
+}
+#footer .inner .bt_wrap2 .bt_copyright{
+    order:2; width: 100%;
+    box-sizing: border-box;
+}
+#footer .inner .bt_wrap2 .bt_sns{
+    order: 1; width: 100%;
+    box-sizing: border-box;
+}
+
+

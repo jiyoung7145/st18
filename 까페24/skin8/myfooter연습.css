@@ -18,9 +18,9 @@
     width:400px;
     padding-left: 10px;
     position: absolute;
-    top: 50%; left: 50px;
+    top: 50%; left: 100px;
     display: block;
-    transform: translateY(calc(-50% - 40%));
+    transform: translateY(calc(-50% - 0%));
  
   }
   #footer .inner .bt_logo a{
@@ -56,7 +56,8 @@
     box-sizing: border-box;
     width: calc(100% - var(--my-footer-logo-width));
     margin-bottom: 0;
-    padding-left: 200px;
+    padding-left: 0;
+    margin-left: auto;
 
 
   }
@@ -85,7 +86,7 @@
     order:1;
     text-align: left;
      flex:none;
-    margin-left: 100px;
+    /* margin-left: 100px; */
 box-sizing: border-box;
     
     
@@ -118,7 +119,7 @@ box-sizing: border-box;
   #footer .inner .bt_wrap2 .bt_sns{
     flex:none;
     position: absolute;
-    right: 300px; bottom: 20px;
+    right: 110px; bottom: 20px;
     box-sizing: border-box;
    }
 

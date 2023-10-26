@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형에서 가로세로베율 맞추는 스타일</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .wrap{margin: 50px;}
+        .sample{
+            box-sizing: border-box;
+            border: 1px solid #f00;
+            width: 200px;
+            /* padding-top을 100% 부모의 너비를 기준으로 */
+            padding-top: 100%;
+           
+        }
+        .sample2{
+            width: 200px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        .sample2 .sample-inner{
+            width: 100%; /*부모요소의 컨텐츠 영역의 크기를 다 사용하겠다*/
+           /*부모의 높이를 사용하는데 부모의 높이가 지정되어있지 않다면 자식요소만큼 가요
+           그래서 css레이아웃 높이를 레이아웃을 % 단위로 지정하려면 반드시 부모의 높이가 지정돼 있어야해요*/
+           
+           height: 100%; border: 1px solid #f00;
+            box-sizing: border-box;
+           /* padding-top을 %단위로 지정하시면 부모의 콘텐츠 영역의 비율에서 가져옵니다
+           padding-top:100%   --->sample2의 콘텐츠 198px */
+            padding-top: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- <div class="sample">
+            텍스트
+        </div> -->
+     <div class="sample2">
+        <div class="sample-inner">
+            텍스트
+        </div>
+     </div>
+     <hr>
+
+     <style>
+        hr{margin: 50px auto;}
+        .sample3{
+            width: 50%;
+            border: 1px solid #f00;
+            box-sizing: border-box;
+        }
+        .sample3 .sample-inner{
+           
+            /* 아주중요!!!! */
+            width: 100;
+            /* 아주중요!!!! */
+            padding-top:100%; /*정사각형이된다. paddingtop은 3:4비율은 75%지정*/
+            background-color: #f6c;
+           position: relative; /*box의 기준요소*/
+        }
+
+        .sample3 .sample-inner .box{
+            position: absolute;
+            left: 0; top: 0;  /*박스가 높이를 인식못함*/
+            width: 100%; height: 100%; /*부모요소의 크기를 따르게 하는 설정 */
+            background-color: rgba(0,0,0,0.3);
+            box-sizing: border-box;
+        }
+        .sample3 .sample-inner .box>img{
+            width: 100%; height: 100%;
+        }
+     </style>
+     <div class="sample3">
+        <div class="sample-inner">
+            <div class="box"><img src="/naver/asset/image/img_main_content8.png" alt="">
+            </div>
+            
+        </div>
+     </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,11 @@
+.smart-banner-bx-wrapper img{
+    transition:all 2s;
+    
+}
+
+.smart-banner-bx-wrapper:hover img{
+    border-radius:200px;
+    transition:all 2s;
+    
+
+}

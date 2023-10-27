@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <img src="../web/myfolder/main/banner1.jpg" alt="">
+        </div>
+    </div>
+    <style>
+        .container{
+            width: 100px;
+      height: 100px;
+     
+      
+      /* 트랜지션 효과: 모든 프로퍼티의 변화를 2초에 걸쳐 전환한다. */
+     
+        }
+        .container img{
+            transition:all 2s;
+            opacity: 1;
+            border-radius:200px;
+        }
+        .container:hover img{
+            border-radius:0px;
+            transition:all 2s;
+           
+            opacity: 0.5;
+            
+      
+        }
+    </style>
+</body>
+</html>

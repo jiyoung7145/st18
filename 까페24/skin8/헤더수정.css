@@ -6,3 +6,9 @@
     display: none !important;
 }
 /* #header .fixed 수정*/
+
+/* 상품 모서리둥글게 */
+.main_product_slide .ec-base-product .prdList .thumbnail{
+    border-radius: 10px;
+    overflow: hidden;
+  }

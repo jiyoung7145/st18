@@ -1,0 +1,39 @@
+/* 아이베이스 배너 슬라이드 변경 */
+
+.xans-smart-banner-admin-PC00003 .smart-banner-bx-wrapper .bx-controls-direction a{
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px 100px;
+    transform: translateY(-50%);
+}
+
+.xans-smart-banner-admin-PC00003 .smart-banner-bx-wrapper .bx-prev{
+    background-image: url(https://nanvitamin0.cafe24.com/web/myfolder/free-icon-download-arrow-109609.png);
+    
+}
+
+
+.xans-smart-banner-admin-PC00003 .smart-banner-bx-wrapper .bx-next{
+    background-image: url(https://nanvitamin0.cafe24.com/web/myfolder/free-icon-download-arrow-109609%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8.png);
+   
+}
+
+
+/* 아이베이스 배너 슬라이드 변경 */
+
+/* 
+https://nanvitamin0.cafe24.com/web/myfolder/free-icon-download-arrow-109609.png 프리뷰
+
+https://nanvitamin0.cafe24.com/web/myfolder/free-icon-download-arrow-109609.png 넥스트 */
+
+
+/* 
+https://nanvitamin0.cafe24.com/web/myfolder/main/banner1.jpg
+https://nanvitamin0.cafe24.com/web/myfolder/main/m-banner1.jpg
+
+https://nanvitamin0.cafe24.com/web/myfolder/main/banner2.jpg
+https://nanvitamin0.cafe24.com/web/myfolder/main/m-banner2.jpg */
+
+

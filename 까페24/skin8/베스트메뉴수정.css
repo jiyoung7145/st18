@@ -1,0 +1,29 @@
+/* 팝업 수정 시작 */
+
+.app-smart-popup .smart-popup-img img{
+    width: 300px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.smart-popup-btns{
+    position: relative;
+    width:220px;
+    height: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+ 
+}
+
+.smart-popup-btns .smart-popup-today{
+    position: absolute;
+    left:0; top: 0;
+    box-sizing: border-box;
+}
+
+.smart-popup-btns .smart-popup-close{
+    position: absolute;
+    right: 0; top: 0;
+    box-sizing: border-box;
+}
+
+/* 팝업 수정 끝 */

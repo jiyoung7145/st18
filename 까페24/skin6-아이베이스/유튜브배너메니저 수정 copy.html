@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+ 
+
+
+  <!-- 16:9 비율의 부모의 너비 따라 크기가 달라지는 유튜브 css -->
+  <div class="my-container my-video main-video">
+    <!-- 소개말 -->
+    <div class="my-title">
+      <div class="my-text">
+        <p class="atxt">
+            <span>A</span>
+            <span>b</span>
+            <span>o</span>
+            <span>u</span>
+            <span>t</span>
+            <span>&nbsp</span>
+            <span>H</span>
+            <span>e</span>
+            <span>y</span>
+            <span>j</span>
+            <span>i</span>
+            <span>y</span>
+            <span>o</span>
+            <span>u</span>
+        </p>
+        <p class="btxt">
+          <span>E</span>
+          <span>a</span>
+          <span>s</span>
+          <span>y</span>
+          <span>W</span>
+          <span>e</span>
+          <span>a</span>
+          <span>r</span>
+         </p>
+        <p class="ctxt">
+            <span>H</span>
+            <span>e</span>
+            <span>y</span>
+            <span>j</span>
+            <span>i</span>
+            <span>y</span>
+            <span>o</span>
+            <span>u</span>
+        </p>
+       <p class="dtxt">
+            <span>U</span>
+            <span>n</span>
+            <span>i</span>
+            <span>q</span>
+            <span>u</span>
+            <span>e</span>
+        </p>
+      </div>
+    </div>
+ 
+
+    <!--동영상  -->
+  <div df-banner-code="text" class="df-bannermanager df-bannermanager-test">
+    <div df-banner-clone="">
+        <iframe src="https://www.youtube.com/embed/Kz2BsKX04ek?si=YIxdCYrU3ltgFzbA&autoplay=1&mute=1&playlist=Kz2BsKX04ek&playsinline=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+        </div>
+  
+  
+</div>
+   <!-- //배너매니저 동영상 -->
+  </div>
+
+  <!-- //my-container.my-video.main-video -->
+ <!-- 배너매니저 스크립트 코드 -->
+ <style>[df-banner-code][hidden] { display:none !important }</style>
+ <script>
+ var ord=Date.now();
+ document.write('<script src="/web/upload/appfiles/ZaReJam3QiELznoZeGGkMG/4054256ff6b011c68180e18bdd6c1af1.js?v='+ord+'"><\/script>');
+
+  window.onload = () => {
+    const introText = document.querySelectorAll(".my-text span");
+  let timer = 100;
+  introText.forEach((item) => {
+    console.log("test\n");
+    item.style.animation = `fade 500ms ${(timer += 300)}ms forwards`;
+  });
+};
+      
+</script>
+
+ 
+ 
+
+   <style>
+    *{margin:0; padding:0;}
+
+    /* 소개글  + 배너매니저 시작*/
+    @keyframes fade {
+     to {
+       opacity: 1;
+       }
+      } 
+
+    .my-video.main-video{
+      max-width:1500px;
+      margin:100px auto;
+      display: float;
+      box-sizing: border-box;
+     background-image: url(/web/myfolder/main/동영상\ 배경화면.jpg);
+    }
+    .my-video.main-video > div{
+      flex:none;
+      box-sizing: border-box;
+    }
+    .my-video.main-video .my-title{
+      width:40%;
+   
+    
+     
+    
+    }
+    .my-video.main-video .my-title .my-text{
+        width: 100%;
+        margin-left: 40px;
+        margin-top: 10px;
+        font-size: 40px;
+        
+        color: #fff;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    }
+    .my-video.main-video .df-bannermanager-test{
+         width:60%;
+    }
+    .my-video.main-video  .df-bannermanager-test >div{
+      position: relative; padding-top:56.25%; 
+      box-sizing: border-box;
+     
+    }
+    .my-video.main-video  .df-bannermanager-test >div > iframe{
+      position: absolute; left:64%; bottom:139px; width: 100%; height: 100%;
+      }
+    /* 소개글  + 배너매니저 끝*/
+    .my-video.main-video .my-title span{
+      	opacity: 0;
+
+       }
+       .my-video.main-video .my-title .my-text .atxt{
+        transform: translate(20px, 50px);
+       }
+       .my-video.main-video .my-title .my-text .btxt{
+        transform: translate(40px, 80px);
+       }
+       .my-video.main-video .my-title .my-text .ctxt{
+        transform: translate(80px, 110px);
+       }
+       .my-video.main-video .my-title .my-text .dtxt{
+        transform: translate(50px ,140px);
+       }
+
+
+   </style>
+</body>
+</html>

@@ -1,0 +1,50 @@
+/* 팝업 수정 시작 */
+
+.app-smart-popup{
+    border:0px;
+    position: absolute;
+    left:0; top: 100vh;
+    margin: 10px;
+    transform: translateY(-100%); 
+    z-index: 10000;
+}
+.app-smart-popup .smart-popup-img img{
+    width: 300px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.smart-popup-btns{
+    position: relative;
+    width:220px;
+    height: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+ 
+}
+
+.smart-popup-btns .smart-popup-today{
+    position: absolute;
+    left:0; top: 0;
+    box-sizing: border-box;
+}
+
+.smart-popup-btns .smart-popup-close{
+    position: absolute;
+    right: 0; top: 0;
+    box-sizing: border-box;
+}
+
+
+
+.app-smart-popup .smart-popup-btns{
+    border-top: 0;
+}
+.app-smart-popup .smart-popup-btns button.smart-popup-close{
+    background-color: transparent;
+    border-left: 0;
+}
+
+
+
+/* 팝업 수정 끝 */

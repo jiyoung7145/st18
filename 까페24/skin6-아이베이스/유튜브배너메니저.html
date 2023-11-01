@@ -6,36 +6,82 @@
     <title>유튜브배너매니저</title>
     <style>
         *{margin: 0; padding: 0;}
-        [df-banner-code="test"]{
-            max-width: 1240px;
-            height: 100vh;
+
+        /* 소개글 + 배너매니저 시작 */
+        .my-video.main-video{
+            max-width: 1200px;
+            
+            display: flex;
+            align-items: stretch;
             box-sizing: border-box;
-             overflow: hidden;
+        }
+        .my-video.main-video > div{
+            flex:none;
+            box-sizing: border-box;
+                   }
+        .my-video.main-video .my-title{
+            width: 40%;
+            background-color: rgba(255,223,200,0.8);
+        }
+        .my-video.main-video .df-bannermanager-test{
+            width: 60%;
         }
 
-        [df-banner-clone]{
+        .my-video.main-video .df-bannermanager-test{
+            position: relative;
+
+        }
+
+
+
+        [df-banner-code="text"]{
+            max-width: 1240px;
+            height: 800px;
+            box-sizing: border-box;
+             overflow: hidden;
+        
+        }
+        [df-banner-clone=""]::after{
+        content: '';
+        position: absolute;
+        left: 0; top: 0; width: 100%; height: 100%;  /* 기준요소의 크기를 따른다*/
+        background-color: rgba(243, 202, 51, 0.3);
+       }
+        [df-banner-clone=""]{
             position: relative; /*.media-wrap 기준*/
         width: 100%;
         padding-top: 56.25%;
+        margin-top: 100px;
         }
 
-    [df-banner-clone] iframe{
+    [df-banner-clone=""] iframe{
         position: absolute;
         left: 50%; top: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
+        
     }
      
     </style>
 </head>
 <body>
+    <div class="my-container">
+        <div class="my-title">
+            <p class="title">lorem</p>
+            <p class="dese"></p>
+            <p class="etc"></p>
+            <p class="etc"></p>
+        </div>
+    </div>
     
-        <div df-banner-code="test">
-            <div df-banner-clone>
+        <div df-banner-code="text" class="df-bannermanager df-bannermanager-test">
+            <div df-banner-clone="">
                <iframe class="media" src="https://www.youtube.com/embed/Kz2BsKX04ek?si=YIxdCYrU3ltgFzbA&autoplay=1&mute=1&playlist=Kz2BsKX04ek&playsinline=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen autoplay loop muted></iframe>
   
 </div>
+<!-- //배너 매니저 동영상 -->
 </div>
+<!-- //my-container.my-video.main-video -->
 </body>
 </html>

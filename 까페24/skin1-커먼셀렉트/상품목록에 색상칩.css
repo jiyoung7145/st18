@@ -1,0 +1,5 @@
+.ec-base-product .spec .chips{
+     width: 20px; height: 8px; /*모양보면서 할것*/
+     border-radius: 8px; /*높이에 맞춰서*/
+
+}

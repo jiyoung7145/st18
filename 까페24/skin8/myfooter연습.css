@@ -1,10 +1,12 @@
 /* footer 수정 css 시작*/
 #footer{
     --my-footer-logo-width:400px;
+    border-radius: 0px 200px 0px 200px ;
     
   }
+  .box2{ border-radius: 10px 50px;}
   #footer .inner{
-    
+   
     flex-direction: row;
     flex-wrap: wrap;
     /* 교차축정렬 */
@@ -18,7 +20,7 @@
     width:400px;
     padding-left: 10px;
     position: absolute;
-    top: 50%; left: 100px;
+    top: 50%; left: 20px;
     display: block;
     transform: translateY(calc(-50% - 0%));
  
@@ -87,7 +89,7 @@
     text-align: left;
      flex:none;
     /* margin-left: 100px; */
-box-sizing: border-box;
+   box-sizing: border-box;
     
     
       
@@ -98,7 +100,19 @@ box-sizing: border-box;
     #footer .inner .bt_wrap  .bt_cscenter .bt_txt01 span:last-child{
       font-size: 2em;
       line-height: 1;
+      font-weight: bold;
     }
+    #footer .inner .bt_wrap  .bt_cscenter .bt_txt02 strong,
+    #footer .inner .bt_wrap  .bt_cscenter .bt_txt01 strong
+    {
+      display: none;
+    }
+    #footer .inner .bt_wrap  .bt_cscenter .bt_txt02 span{
+      line-height: 1.5;
+      font-size: 1em;
+
+    }
+
 
     #footer .inner .bt_cscenter .bt_txt01 > strong{
       display: block;
@@ -122,5 +136,14 @@ box-sizing: border-box;
     right: 110px; bottom: 20px;
     box-sizing: border-box;
    }
+   #footer .inner .bt_info .bt_info_list [data-ez-item="phone"]
+   {
+    display: none;
+   }
+   #footer .inner .bt_info .bt_info_list [data-ez-item="company_regno"]
+   {
+    display: none;
+   }
+  
 
   /* footer 수정 css 끝*/

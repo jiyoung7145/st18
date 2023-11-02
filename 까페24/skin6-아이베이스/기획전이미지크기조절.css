@@ -1,9 +1,9 @@
 /* 기획전이미지 크기조절 */
-.xans-project-package .banner{
+.xans-product-headcategory.product_top_image{
     text-align: center;
 }
 
-.xans-project-package .banner img{
+.xans-product-headcategory.product_top_image img{
     max-width: 100%;
     width: auto;
 }

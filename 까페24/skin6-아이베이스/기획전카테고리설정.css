@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+
+.navigation__category>ul{
+    display: inline-block;
+}

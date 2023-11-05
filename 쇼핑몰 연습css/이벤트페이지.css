@@ -1,0 +1,98 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+.wrap{
+    width:860px;
+    font-size: 0;
+   }
+.header{
+    width: 100%;
+    display: block;
+    
+}
+
+.event1{
+   background-color: #f86;
+ 
+    font-size: 15px;
+   padding-top: 50px;
+   box-sizing: border-box;
+   
+}
+
+.event1 h1{
+    margin: 0 auto;
+   width: 200px;
+   background-color: #000;
+   color: #fff;
+   padding: 3px 30px 3px;
+   box-sizing: border-box;
+   border-radius: 50px;
+   margin-bottom: 50px;
+   
+   
+
+}
+
+
+
+
+.newitem_list{
+    width: 100%;
+    background-color: rgb(181, 151, 151);
+    
+}
+.list-title{
+    margin-top: 100px;
+    padding:10px 0 ;
+}
+.list-title h1{
+    text-align: center;
+    display: block;
+    color: blue;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+.newitem_list ul.newitem-list-title{
+    display: flex;
+    flex-wrap: wrap;
+   padding: 70px 100px 100px;
+    
+   
+    
+   
+}
+.newitem_list ul.newitem-list-title>li{
+    
+    width: 50%;
+    margin-bottom: 50px;
+    list-style: none;
+    
+
+   
+}
+.newitem_list ul.newitem-list-title>li .thumnail
+ {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 20px;
+  
+}
+.newitem_list ul.newitem-list-title>li .description{
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 10px;
+ 
+
+    
+
+}
+.newitem_list .newitem-list-title>li a img {
+   
+    width: 100%;
+    
+    object-fit: cover;
+    overflow: hidden;
+   
+}

@@ -1,0 +1,24 @@
+/* 메인상품목록  border-radius */
+/* 베스트메뉴 신상품 */
+[data-ez="contents-1joqdg5-1"] .thumbnail a img,
+[data-ez="contents-0airvrw-1"] .thumbnail a img{
+    transition: all 2s;
+    opacity: 1;
+}
+[data-ez="contents-1joqdg5-1"] .thumbnail:hover a img,
+[data-ez="contents-0airvrw-1"] .thumbnail:hover a img {
+    border-radius: 300px;
+    transition: all 2s;
+    opacity: 0.5;
+
+}
+/* 메인상품목록  border-radius 끝 */
+
+/* 할인률 색상변경 */
+ 
+.theme03 .ec-base-product .prdList .thumbnail .sale_box{
+   background-color:rgb(246, 128, 49);
+   color: #fff;
+}
+
+/* 할인률 색상변경 끝 */

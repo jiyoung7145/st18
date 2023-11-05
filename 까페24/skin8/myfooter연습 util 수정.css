@@ -16,14 +16,12 @@
 }
 #footer .inner .bt_logo{
  box-sizing: border-box;
-  order:2;
-  width:400px;
-  padding-left: 10px;
-  position: absolute;
-  top: 50%; left: 20px;
-  display: block;
-  transform: translateY(calc(-50% - 0%));
-
+  order:1;
+  width:30%;
+  padding-right: auto;
+ align-self: center;
+ margin-bottom: 0;
+ 
 }
 #footer .inner .bt_logo a{
   display: block;
@@ -32,33 +30,32 @@
  
 }
 #footer .inner .bt_util{
-  order:1;
+  order:4;
   flex:none;
   box-sizing: border-box;
   width: 100%;
- margin-right: auto;
-  margin-bottom: 20px;
-  position: relative;
-  height: 40px;
-
+ position: relative;
+ 
+background-color: rgb(172, 104, 104);
+margin-bottom:0;
   
 }
-#footer .inner .bt_util::after{
+/* #footer .inner .bt_util::after{
   content:'';
   width: 100%; height: 1px;
   background-color: #e0dede;
      position: absolute;
-      left: 0; bottom: 0px;
+      left: 0; bottom: 0px;} */
    
   
-}
+
 #footer .inner .bt_wrap{
-  order:3;
+  order:2;
   display: flex;
   flex-direction: row;
   justify-content:flex-end;
   box-sizing: border-box;
-  width: calc(100% - var(--my-footer-logo-width));
+  width: 70%;
   margin-bottom: 15px;
   padding-left: 0;
   margin-left: auto;
@@ -66,7 +63,7 @@
 
 }
 #footer .inner .bt_wrap2{
-  order:4;
+  order:3;
   width: 100%;
  position: relative;
  box-sizing: border-box;

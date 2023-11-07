@@ -1,0 +1,6 @@
+/* 쇼핑기획전 가운데정렬 */
+.projectItem.xans-layout-project h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+

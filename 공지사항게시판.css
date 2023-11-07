@@ -6,7 +6,7 @@
     --my-banner-wrap-max-width:1024px;
     --my-banner-gap:0px;
     --my-banner-item-min-width:300px; /*원이미지크기를 지정하세요*/
-    background-color: aqua;
+    background-color: #d8d7d7;
   }
   .my-banner-wrap{
     padding-top:var(--my-banner-top-padding);
@@ -75,30 +75,86 @@ object-fit: cover;
 object-position: center;
 }
 
-.bt-info{
+.my-banner.my-board .my-banner-wrap .my-banner-container li{
+  height: 400px;
+
+}		
+.my-banner.my-board .bt-info{
   width: 100%;
     background:url(/st18/web/myfolder/main/pexels-nugroho-wahyu-3119164.jpg);
+   object-fit: fill;
+
 
 }
 
-.bt-info-wrap{
+.my-banner.my-board .bt-info-wrap{
+
+
   width: 80%;
-  height: 250px;
-  background-color: rgba(255,136,102,0.7);
+     background-color: rgba(255,255,255, 0.7);
   margin:0 50px;
   box-sizing: border-box;
 }
-.bt_cscenter{
+.my-banner.my-board .bt_cscenter{
+  
   display: block;
+  text-align: center;
+  box-sizing: border-box;
+  
+ 
+}
+.my-banner.my-board .bt_cscenter .title{
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 20px 0;
+  
+}
+.my-banner.my-board .bt_cscenter .bt_txt01{
+  padding-bottom: 10px;
+}
+.my-banner.my-board .bt_cscenter .bt_txt01 span{
+  display: block;
+}
+.my-banner.my-board .bt_cscenter .bt_txt01 span:last-child{
+  font-size: 30px;
+  line-height: 1;
+  font-weight: bold;
+  padding-left: 0;
+  margin-left: 0;
+}
+.my-banner.my-board .bt_cscenter .bt_txt01 strong,
+.my-banner.my-board .bt_cscenter .bt_txt02 strong
+{
+  display: block;
+  font-size: 1.2em;
+  padding: 10px 0;
+}
+.my-banner.my-board .bt_cscenter .bt_txt02 span
+{
+  display: block;
+  font-size: 1.5em;
   
 }
 
-.xans-board-1.board{
+.my-banner.my-board .bt_cscenter .bt_txt02 span:last-child{
+  padding-bottom: 20px;
+}
+.my-banner.my-board .bt_cscenter .bt_txt02 span{
+  line-height: 1.5;
+    font-size: 1.1em;
+    display: block;
+
+}
+.my-banner.my-board .xans-board-1.board{
   width: 100%;
   margin: 0 auto;
  
-  height: 400px;
 }
+
+[data-ez="contents-1m3jqi6-1"] .my-banner-wrap{
+  margin: 100px;
+}
+
 
   /* .my-banner 종료 */
   

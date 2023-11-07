@@ -1,0 +1,277 @@
+/* footer 수정 css 시작*/
+#footer{
+  --my-footer-logo-width:400px;
+  background-color: #f6f6f6;
+ }
+#footer .inner{
+  
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* 교차축정렬 */
+  align-items: flex-start;
+  position: relative;
+    padding:20px 0 10px;
+    font-family:"Noto Sans KR"; 
+}
+#footer .inner .bt_logo{
+ box-sizing: border-box;
+  order:1;
+  width:15%;
+  padding-right: auto;
+ margin-bottom: 0;
+ align-items: start;
+}
+#footer .inner .bt_logo a{
+  width: 100%;
+  display: block;
+  text-align: center;
+  
+}
+
+#footer .inner .bt_util{
+  order:2;
+  box-sizing: border-box;
+  width: 15%;
+  margin-bottom:0;
+  padding-left: 100px;
+  padding-top: 10px;
+
+
+}
+
+#footer .inner .bt_util .title
+{
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-bottom: 26px;
+  margin-top: -4px;
+
+}
+
+
+
+#footer .inner .bt_util ul{
+  display: flex;
+flex-direction: column;
+
+}
+
+#footer .inner .bt_util ul li{
+margin: 0;
+padding: 0;
+
+}
+
+#footer .inner .bt_util ul li a{
+  line-height: 1.7;
+}
+
+  
+
+#footer .inner .bt_wrap{
+  order:3;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  box-sizing: border-box;
+  width: 70%;
+  margin-bottom: 15px;
+  padding-left: 130px;
+  flex-wrap: wrap;
+  
+  
+
+}
+#footer .inner .bt_wrap2{
+  order:3;
+  width: 100%;
+ position: relative;
+ box-sizing: border-box;
+ 
+
+}
+#footer .inner .bt_wrap .bt_info{
+  order:3;
+  margin-top:0;
+  margin-left: 0px;
+  max-width:350px ;
+  }
+#footer .inner .bt_wrap .bt_bank{
+  order:2;
+margin: 0 50px;
+ 
+
+}
+#footer .inner .bt_wrap .bt_cscenter{
+  order:1;
+  text-align: left;
+   flex:none;
+  margin: 0;
+ box-sizing: border-box;
+  
+  
+    
+}
+#footer .inner .bt_wrap  .bt_cscenter .title{
+  order:3;
+  font-size: 1.2em;}
+  #footer .inner .bt_wrap  .bt_cscenter .title,
+  #footer .inner .bt_wrap  .bt_bank .title,
+  #footer .inner .bt_wrap  .bt_info .title,
+  #footer .inner .bt_wrap .bt_util .title
+  {
+    font-size: 1.2em;
+    padding-bottom: 15px;
+  }
+
+
+  #footer .inner .bt_wrap  .bt_cscenter .bt_txt01 span:last-child{
+    font-size: 30px;
+    line-height: 1;
+    font-weight: bold;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  #footer .inner .bt_wrap  .bt_cscenter .bt_txt02 strong,
+  #footer .inner .bt_wrap  .bt_cscenter .bt_txt01 strong
+  {
+    display: none;
+  }
+  #footer .inner .bt_wrap  .bt_cscenter .bt_txt02 span{
+    line-height: 1.5;
+    font-size: 1em;
+
+  }
+
+
+  #footer .inner .bt_cscenter .bt_txt01 > strong{
+    display: block;
+  }
+
+
+  #footer .inner .bt_wrap .bt_cscenter .bt_txt02:nth-of-type(2){display: none;}
+#footer .inner .bt_wrap .bt_cscenter .bt_txt02:nth-of-type(3) span{display: block;}
+
+#footer .inner .bt_wrap2 .bt_copyright{
+  flex:none;
+   position: absolute;
+   left: 0; bottom: 10px;
+  text-align: center;
+     box-sizing: border-box;
+     margin-bottom: 10px;
+}
+#footer .inner .bt_wrap2 .bt_sns{
+  flex:none;
+  position: absolute;
+  right: 110px; bottom: 20px;
+  box-sizing: border-box;
+ }
+ #footer .inner .bt_info .bt_info_list [data-ez-item="phone"]
+ {
+  display: none;
+ }
+ #footer .inner .bt_info .bt_info_list span[data-ez-item="president_name"]
+ {
+  display: block;
+ }
+
+ #footer .inner .bt_wrap2 .bt_sns .title{
+  display: none;
+ } 
+
+ @media (max-width:1479px){
+  
+#footer .inner{
+  padding: 0 20px 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+  #footer .inner .bt_logo{
+    width:100%;
+    margin: 0;
+    padding: 0;
+       
+     }
+     #footer .inner .bt_logo a{
+       text-align: left;
+       margin: 20px 0;
+       width: 100%;
+     }
+  #footer .inner .bt_util{
+    width: 15%;
+    margin-left: 0;
+    padding-left: 20px;
+  }
+
+  #footer .inner .bt_wrap{
+    margin-left: 0;
+    padding-left: 0;
+   flex-wrap: wrap;
+   width: 80%;
+   margin-right: 0;
+   padding-left: 0;
+    }
+     }
+
+  @media (max-width:1265px){
+    #footer .inner{
+      
+    }
+    #footer .inner .bt_logo{
+      width:100%;
+      padding-top: 50px;
+         
+       }
+       #footer .inner .bt_logo a{
+        text-align: center;
+        transform: translate(0,-25%);
+         }
+    
+    #footer .inner .bt_util{
+      width: 100%;
+         }
+
+         
+#footer .inner .bt_util ul{
+  display: flex;
+flex-direction: row;
+justify-content: flex-start;
+}
+  
+#footer .inner .bt_util ul li{
+padding-left: 20px;
+padding-right: 20px;
+  
+  }
+    #footer .inner .bt_wrap{
+       width: 100%;
+      flex-wrap: wrap;
+      }
+      #footer .inner .bt_util .title{
+        display: none;
+
+  }
+  #footer .inner .bt_util{
+         position: relative;
+    }
+  #footer .inner .bt_util::after{
+    content:'';
+    width: 100%; height: 1px;
+    background-color: #e0dede;
+       position: absolute;
+        left: 0; bottom: 0px;
+     
+    
+  }
+
+  #footer .inner .bt_util ul li:nth-of-type(3) {
+    padding:0;
+  }
+  }
+
+  @media (max-width:767px){
+    
+
+  }
+  /* footer 수정 css 끝*/
+

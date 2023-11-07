@@ -24,7 +24,7 @@
     position: relative;
     overflow: hidden;
  }
-
+ 
  .my-set .ec-base-product .prdList__item .description{
     position: absolute;
     left: 0; bottom: 0;
@@ -35,6 +35,16 @@
     transform: translateY(100%);
     opacity: 0;
     transition: all 0.1s;
+  }
+  .my-set .ec-base-product .prdList__item [ec-data-price="46550"].description{
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%;
+    padding: 2em 1em;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.7);
+    opacity: 0;
+   
   }
   .my-set .ec-base-product .prdList__item .thumbnail{
     height: 100%;

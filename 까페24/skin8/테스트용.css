@@ -28,16 +28,25 @@
 }
 
 /* 할인률 색상변경 끝 */
-.main_top_banner.ez-align-left{
-    background: url(https://nanvitamin0.cafe24.com/web/myfolder/main/%EB%9D%A0%EB%B0%B0%EB%84%88.png) no-repeat;
-    width: 100%;
-    height: 100px;   
-}
+/* .main_top_banner 수정*/
+
 .theme03 .main_top_banner{
-    background: url(https://nanvitamin0.cafe24.com/web/myfolder/main/%EB%9D%A0%EB%B0%B0%EB%84%88.png) no-repeat;
+    background: url(https://nanvitamin0.cafe24.com/web/myfolder/main/%EC%83%81%EB%8B%A8%20%EB%9D%A0%EB%B0%B0%EB%84%88.jpg) no-repeat;
     width: 100%;
     height: 100px;
+    background-size: cover;
+    background-position: center;
+    padding: 0;
 }
+.main_top_banner .top_banner_box_inner .top_banner_close{
+    color:#fff;
+}
+.main_top_banner .top_banner_box_inner .top_banner_close .icon.icoClose:before,
+.main_top_banner .top_banner_box_inner .top_banner_close .icon.icoClose:after{
+    background-color: #fff;
+}
+
+
 
 #header .inner .top_nav_box .top_category > ul > li > a{
     color: #fff;
@@ -46,3 +55,37 @@
 .theme03 #header.fixed .inner .top_nav_box .top_category > ul > li > a:after{
    background-color: rgb(102, 255, 242);
 }
+
+[data-ez="contents-0vhzwmx-1"] .board.xans-board-listpackage-4 h3{
+    text-align: center;
+    font-weight: 700;
+    border-bottom: 0px;
+    margin-bottom: 20px;
+}
+
+/* 기획전 미디어쿼리 적용 */
+@media (max-width:767px){
+    .projectItem.xans-layout-project li{
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+/* 리뷰 미디어쿼리 적용 */
+@media (max-width:767px){
+.board.xans-board-listpackage-4 .galleryList ul{
+    display: flex;
+  justify-content: space-between;
+}
+
+.board.xans-board-listpackage-4 .galleryList li{
+    width: 50%;
+}
+}
+
+.ec-base-product.swiper-container.ec-base-product .prdList .description{
+    display: none !important;
+}
+

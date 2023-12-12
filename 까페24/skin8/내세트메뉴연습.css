@@ -173,8 +173,32 @@
     .my-container.my-set .main_product_list{
       width:100%;
     }
-    
+    .my-set .ec-base-product .prdList__item .description{
+      display: none;
+      /* position: absolute;
+      left: 0; bottom: 0;
+      width: 100%;
+      padding: 2em 1em;
+      box-sizing: border-box;
+     display: block;
+     */
+ 
+    }
+
+    .ec-base-product ul.grid3 > li{
+      width: 100%;
+      display: block;
+    }
+    .my-set .xans-product-listmain li.xans-record- .prdList__item .description{
+      display: block;
+      transform: translateY(1);
+      opacity: 1;
+     
+   }
+   .my-set .xans-product-listmain li.xans-record- .prdList__item .description li{
+   display: block;
+
   }
-  
+}
   /* 세트메뉴 설정 끝 */
   

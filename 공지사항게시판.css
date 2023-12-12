@@ -53,10 +53,19 @@
       min-width: var(--my-banner-item-min-width);/*이미지 크기 유지하기 위해서*/
       scroll-snap-align: center;
     }
-    .my-banner-wrap .my-banner-container.col2 li{ width:calc(48% - var(--my-banner-gap))}
+
+     .my-banner-wrap .my-banner-container.col2 li{ width:calc(48% - var(--my-banner-gap))}
     .my-banner-wrap .my-banner-container.col3 li{ width:calc(31% - var(--my-banner-gap));}
     .my-banner-wrap .my-banner-container.col4 li{ width:calc(23% - var(--my-banner-gap))}
     
+    .my-banner-wrap .my-banner-container.col2{
+      display: flex;
+      flex-direction: column;
+    }
+    .my-banner-wrap .my-banner-container.col2 li{
+      width: 100%;
+    }
+   
   }
   .my-banner.my-board .my-banner-container.col2{
     gap:100px;

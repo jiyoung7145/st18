@@ -2,43 +2,63 @@
 #footer{
   --my-footer-logo-width:400px;
   background-color: #f6f6f6;
+  
  }
 #footer .inner{
-  
+  width: 100%;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   /* 교차축정렬 */
   align-items: flex-start;
-  position: relative;
-    padding:20px 0 10px;
+     padding:20px 50px 10px;
     font-family:"Noto Sans KR"; 
+    box-sizing: border-box;
 }
 #footer .inner .bt_logo{
  box-sizing: border-box;
   order:1;
-  width:15%;
-  padding-right: auto;
- margin-bottom: 0;
- align-items: start;
+  width:calc(16.667% * 1 - 2px);
+  margin-bottom: 0;
+  /* align-self: center; */
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 1;
 }
 #footer .inner .bt_logo a{
   width: 100%;
-  display: block;
-  text-align: center;
+   transform: translate(0, -15%);
   
 }
 
 #footer .inner .bt_util{
   order:2;
   box-sizing: border-box;
-  width: 15%;
+  width: 16.667%;
   margin-bottom:0;
-  padding-left: 100px;
+  padding-left: 0;
   padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 
 }
+#footer .inner .bt_wrap{
+  order:3;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  box-sizing: border-box;
+  width: calc(16.667% * 4 - 1px);
+  margin-bottom: 15px;
+  padding: 0;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  
+  
 
+}
 #footer .inner .bt_util .title
 {
   font-size: 1.2em;
@@ -68,20 +88,7 @@ padding: 0;
 
   
 
-#footer .inner .bt_wrap{
-  order:3;
-  display: flex;
-  flex-direction: row;
-  justify-content:space-between;
-  box-sizing: border-box;
-  width: 70%;
-  margin-bottom: 15px;
-  padding-left: 130px;
-  flex-wrap: wrap;
-  
-  
 
-}
 #footer .inner .bt_wrap2{
   order:3;
   width: 100%;
@@ -92,21 +99,24 @@ padding: 0;
 }
 #footer .inner .bt_wrap .bt_info{
   order:3;
+  width: 50%;
   margin-top:0;
   margin-left: 0px;
-  max-width:350px ;
+  /* max-width:350px ; */
+  box-sizing: border-box;
   }
+
 #footer .inner .bt_wrap .bt_bank{
   order:2;
-margin: 0 50px;
- 
+margin-left: 0;
+ width: 25%;
+ box-sizing: border-box;
 
 }
 #footer .inner .bt_wrap .bt_cscenter{
   order:1;
-  text-align: left;
-   flex:none;
-  margin: 0;
+  width:25%;
+   margin: 0;
  box-sizing: border-box;
   
   
@@ -179,99 +189,102 @@ margin: 0 50px;
   display: none;
  } 
 
- @media (max-width:1479px){
+ #footer .inner .bt_info .bt_info_list > div[data-ez-item="address"] [data-ez-role="field"]{
+  display: none;
+
+ }
+
+ #footer .inner .bt_info .bt_info_list > div[data-ez-item="cpo_name"]{
+  width: 100%;
+ }
+ #footer .inner .bt_info .bt_info_list > div[data-ez-item="company_regno"]{
+  width: 100%;
+ }
+
+ @media (max-width:1124px){
+  #footer .inner .bt_logo img{
+    max-width: 150px;
+    max-height: 60px;
   
-#footer .inner{
-  padding: 0 20px 0;
-  margin: 0;
-  flex-wrap: wrap;
-}
-  #footer .inner .bt_logo{
-    width:100%;
-    margin: 0;
-    padding: 0;
-       
-     }
-     #footer .inner .bt_logo a{
-       text-align: left;
-       margin: 20px 0;
-       width: 100%;
-     }
-  #footer .inner .bt_util{
-    width: 15%;
-    margin-left: 0;
-    padding-left: 20px;
+  }
+  #footer .inner .bt_wrap .bt_cscenter .bt_txt01 span:last-child{
+    font-size: 25px;
   }
 
-  #footer .inner .bt_wrap{
-    margin-left: 0;
-    padding-left: 0;
-   flex-wrap: wrap;
-   width: 80%;
-   margin-right: 0;
-   padding-left: 0;
-    }
-     }
-
-  @media (max-width:1265px){
-    #footer .inner{
-      
-    }
-    #footer .inner .bt_logo{
-      width:100%;
-      padding-top: 50px;
-         
-       }
-       #footer .inner .bt_logo a{
-        text-align: center;
-        transform: translate(0,-25%);
-         }
+ }
+ @media (max-width:1024px){
+   #footer .inner .bt_logo{
+    width:100%;
+    min-width: 210px;
+    min-height: 70px;
+    flex:none;
     
-    #footer .inner .bt_util{
-      width: 100%;
-         }
-
-         
+     }
+     #footer .inner .bt_util{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+       }
+   #footer .inner .bt_bank{
+    margin: 0;
+  
+  }
+       
 #footer .inner .bt_util ul{
-  display: flex;
+display: flex;
 flex-direction: row;
 justify-content: flex-start;
 }
-  
 #footer .inner .bt_util ul li{
-padding-left: 20px;
-padding-right: 20px;
-  
-  }
-    #footer .inner .bt_wrap{
-       width: 100%;
-      flex-wrap: wrap;
-      }
-      #footer .inner .bt_util .title{
-        display: none;
+  padding-left: 10px;
+}
 
-  }
-  #footer .inner .bt_util{
-         position: relative;
+  #footer .inner .bt_wrap{
+     width: 100%;
+    flex-wrap: wrap;
     }
-  #footer .inner .bt_util::after{
-    content:'';
-    width: 100%; height: 1px;
-    background-color: #e0dede;
-       position: absolute;
-        left: 0; bottom: 0px;
-     
-    
-  }
+    #footer .inner .bt_util .title{
+      display: none;
 
-  #footer .inner .bt_util ul li:nth-of-type(3) {
-    padding:0;
-  }
-  }
+}
+#footer .inner .bt_wrap .bt_info{
+    width: 100%;
+    margin-bottom: 20px;
+   }
 
-  @media (max-width:767px){
-    
+#footer .inner .bt_wrap .bt_bank{
+ width: 100%;
+ margin-bottom: 20px;
+}
+#footer .inner .bt_wrap .bt_cscenter{
+   width:100%;
+   margin-bottom: 20px;
+ }
+ #footer .inner .bt_util::after{
+  content:'';
+  width: 100%; height: 1px;
+  background-color: #e0dede;
+     position: absolute;
+      left: 0; bottom: 0px;
+   
+  
+}
+#footer .inner .bt_wrap2 .bt_copyright{
+ 
+ display: none;
+}
+#footer .inner .bt_wrap2 .bt_sns{
+  width: 100%;
+  flex-wrap: wrap;
+  position: absolute;
+  left:0; top: -33px;
+  box-sizing: border-box;
+ }
+ #footer .inner .bt_wrap .bt_cscenter .title, #footer .inner .bt_wrap .bt_bank .title, #footer .inner .bt_wrap .bt_info .title, #footer .inner .bt_wrap .bt_util .title{
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+ }
 
-  }
-  /* footer 수정 css 끝*/
+ }
 
+ 
